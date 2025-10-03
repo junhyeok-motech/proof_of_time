@@ -1,0 +1,4130 @@
+[
+  {
+    "prediction": {
+      "professor": "Priya Donti",
+      "affiliation": "Carnegie Mellon University",
+      "predicted_keywords": [
+        "machine learning",
+        "climate change",
+        "energy systems",
+        "sustainability",
+        "data-driven decision making"
+      ],
+      "predicted_subfields": [
+        "artificial intelligence",
+        "environmental science",
+        "renewable energy",
+        "optimization",
+        "policy analysis"
+      ],
+      "predicted_modalities": [
+        "computational modeling",
+        "data analysis",
+        "simulation",
+        "interdisciplinary collaboration",
+        "real-time monitoring"
+      ]
+    },
+    "verification": {
+      "keyword_precision": 0.0,
+      "keyword_recall": 0.0,
+      "subfield_precision": 0.4,
+      "subfield_recall": 0.25,
+      "modality_precision": 0.0,
+      "modality_recall": 0.0,
+      "overall_score": 0.103,
+      "matches": {
+        "keyword_matches": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "subfield_matches": [
+          1,
+          0,
+          1,
+          0,
+          0
+        ],
+        "modality_matches": [
+          0,
+          0,
+          0
+        ]
+      },
+      "n_actual_items": 3,
+      "author_prediction": {
+        "professor": "Priya Donti",
+        "affiliation": "Carnegie Mellon University",
+        "predicted_keywords": [
+          "machine learning",
+          "climate change",
+          "energy systems",
+          "sustainability",
+          "data-driven decision making"
+        ],
+        "predicted_subfields": [
+          "artificial intelligence",
+          "environmental science",
+          "renewable energy",
+          "optimization",
+          "policy analysis"
+        ],
+        "predicted_modalities": [
+          "computational modeling",
+          "data analysis",
+          "simulation",
+          "interdisciplinary collaboration",
+          "real-time monitoring"
+        ]
+      }
+    }
+  },
+  {
+    "prediction": {
+      "professor": "Linda Eggert",
+      "affiliation": "University of California, Berkeley",
+      "predicted_keywords": [
+        "sustainable agriculture",
+        "climate change adaptation",
+        "agroecology",
+        "food security",
+        "biodiversity conservation"
+      ],
+      "predicted_subfields": [
+        "environmental science",
+        "agricultural economics",
+        "sustainability studies",
+        "ecology"
+      ],
+      "predicted_modalities": [
+        "field experiments",
+        "data analysis",
+        "modeling and simulation",
+        "community engagement"
+      ]
+    },
+    "verification": null,
+    "error": "no 2025 papers found"
+  },
+  {
+    "prediction": {
+      "professor": "Jeffrey Ding",
+      "affiliation": "University of California, Berkeley",
+      "predicted_keywords": [
+        "artificial intelligence",
+        "machine learning",
+        "natural language processing",
+        "AI ethics",
+        "algorithmic fairness"
+      ],
+      "predicted_subfields": [
+        "AI governance",
+        "human-computer interaction",
+        "data science",
+        "computational social science"
+      ],
+      "predicted_modalities": [
+        "quantitative analysis",
+        "qualitative research",
+        "interdisciplinary collaboration",
+        "policy analysis"
+      ]
+    },
+    "verification": {
+      "keyword_precision": 0.0,
+      "keyword_recall": 0.0,
+      "subfield_precision": 0.0,
+      "subfield_recall": 0.0,
+      "modality_precision": 0.25,
+      "modality_recall": 0.067,
+      "overall_score": 0.035,
+      "matches": {
+        "keyword_matches": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "subfield_matches": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "modality_matches": [
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      "n_actual_items": 4,
+      "author_prediction": {
+        "professor": "Jeffrey Ding",
+        "affiliation": "University of California, Berkeley",
+        "predicted_keywords": [
+          "artificial intelligence",
+          "machine learning",
+          "natural language processing",
+          "AI ethics",
+          "algorithmic fairness"
+        ],
+        "predicted_subfields": [
+          "AI governance",
+          "human-computer interaction",
+          "data science",
+          "computational social science"
+        ],
+        "predicted_modalities": [
+          "quantitative analysis",
+          "qualitative research",
+          "interdisciplinary collaboration",
+          "policy analysis"
+        ]
+      }
+    }
+  },
+  {
+    "prediction": {
+      "professor": "Aditya Grover",
+      "affiliation": "Stanford University",
+      "predicted_keywords": [
+        "machine learning",
+        "graph neural networks",
+        "causal inference",
+        "data privacy",
+        "AI ethics"
+      ],
+      "predicted_subfields": [
+        "artificial intelligence",
+        "data science",
+        "network analysis",
+        "computational social science"
+      ],
+      "predicted_modalities": [
+        "theoretical modeling",
+        "empirical studies",
+        "algorithm development",
+        "interdisciplinary collaboration"
+      ]
+    },
+    "verification": null,
+    "error": "no 2025 papers found"
+  },
+  {
+    "prediction": {
+      "professor": "Chelsea Finn",
+      "affiliation": "Stanford University",
+      "predicted_keywords": [
+        "meta-learning",
+        "robotics",
+        "machine learning",
+        "generalization",
+        "transfer learning"
+      ],
+      "predicted_subfields": [
+        "artificial intelligence",
+        "robotics",
+        "computer vision",
+        "human-robot interaction"
+      ],
+      "predicted_modalities": [
+        "simulation",
+        "real-world applications",
+        "neural networks",
+        "reinforcement learning"
+      ]
+    },
+    "verification": null,
+    "error": "no 2025 papers found"
+  },
+  {
+    "prediction": {
+      "professor": "Dan Hendrycks",
+      "affiliation": "University of California, Berkeley",
+      "predicted_keywords": [
+        "AI safety",
+        "robustness",
+        "generalization",
+        "machine learning",
+        "adversarial attacks"
+      ],
+      "predicted_subfields": [
+        "Artificial Intelligence",
+        "Machine Learning",
+        "Computer Vision",
+        "Robust AI"
+      ],
+      "predicted_modalities": [
+        "Theoretical research",
+        "Empirical studies",
+        "Algorithm development",
+        "Interdisciplinary applications"
+      ]
+    },
+    "verification": {
+      "keyword_precision": 0.0,
+      "keyword_recall": 0.0,
+      "subfield_precision": 0.75,
+      "subfield_recall": 0.6,
+      "modality_precision": 0.0,
+      "modality_recall": 0.0,
+      "overall_score": 0.222,
+      "matches": {
+        "keyword_matches": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "subfield_matches": [
+          1,
+          1,
+          1,
+          0
+        ],
+        "modality_matches": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "n_actual_items": 1,
+      "author_prediction": {
+        "professor": "Dan Hendrycks",
+        "affiliation": "University of California, Berkeley",
+        "predicted_keywords": [
+          "AI safety",
+          "robustness",
+          "generalization",
+          "machine learning",
+          "adversarial attacks"
+        ],
+        "predicted_subfields": [
+          "Artificial Intelligence",
+          "Machine Learning",
+          "Computer Vision",
+          "Robust AI"
+        ],
+        "predicted_modalities": [
+          "Theoretical research",
+          "Empirical studies",
+          "Algorithm development",
+          "Interdisciplinary applications"
+        ]
+      }
+    }
+  },
+  {
+    "prediction": {
+      "professor": "Nika Haghtalab",
+      "affiliation": "",
+      "predicted_keywords": [
+        "machine learning",
+        "natural language processing",
+        "ethical AI",
+        "algorithmic fairness",
+        "human-computer interaction"
+      ],
+      "predicted_subfields": [
+        "artificial intelligence",
+        "computational linguistics",
+        "social implications of AI",
+        "data ethics"
+      ],
+      "predicted_modalities": [
+        "theoretical research",
+        "empirical studies",
+        "interdisciplinary collaborations",
+        "workshops and seminars"
+      ]
+    },
+    "verification": {
+      "keyword_precision": 0.0,
+      "keyword_recall": 0.0,
+      "subfield_precision": 0.25,
+      "subfield_recall": 0.056,
+      "modality_precision": 0.0,
+      "modality_recall": 0.0,
+      "overall_score": 0.03,
+      "matches": {
+        "keyword_matches": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "subfield_matches": [
+          1,
+          0,
+          0,
+          0
+        ],
+        "modality_matches": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "n_actual_items": 9,
+      "author_prediction": {
+        "professor": "Nika Haghtalab",
+        "affiliation": "",
+        "predicted_keywords": [
+          "machine learning",
+          "natural language processing",
+          "ethical AI",
+          "algorithmic fairness",
+          "human-computer interaction"
+        ],
+        "predicted_subfields": [
+          "artificial intelligence",
+          "computational linguistics",
+          "social implications of AI",
+          "data ethics"
+        ],
+        "predicted_modalities": [
+          "theoretical research",
+          "empirical studies",
+          "interdisciplinary collaborations",
+          "workshops and seminars"
+        ]
+      }
+    }
+  },
+  {
+    "prediction": {
+      "professor": "Hima Lakkaraju",
+      "affiliation": "Stanford University",
+      "predicted_keywords": [
+        "fairness in machine learning",
+        "explainable AI",
+        "algorithmic bias",
+        "data privacy",
+        "human-centered AI"
+      ],
+      "predicted_subfields": [
+        "machine learning",
+        "artificial intelligence",
+        "data science",
+        "human-computer interaction"
+      ],
+      "predicted_modalities": [
+        "quantitative analysis",
+        "qualitative research",
+        "interdisciplinary collaboration",
+        "user studies"
+      ]
+    },
+    "verification": {
+      "keyword_precision": 0.4,
+      "keyword_recall": 0.333,
+      "subfield_precision": 0.5,
+      "subfield_recall": 0.5,
+      "modality_precision": 0.25,
+      "modality_recall": 0.333,
+      "overall_score": 0.383,
+      "matches": {
+        "keyword_matches": [
+          0,
+          1,
+          1,
+          0,
+          0
+        ],
+        "subfield_matches": [
+          1,
+          1,
+          0,
+          0
+        ],
+        "modality_matches": [
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "n_actual_items": 1,
+      "author_prediction": {
+        "professor": "Hima Lakkaraju",
+        "affiliation": "Stanford University",
+        "predicted_keywords": [
+          "fairness in machine learning",
+          "explainable AI",
+          "algorithmic bias",
+          "data privacy",
+          "human-centered AI"
+        ],
+        "predicted_subfields": [
+          "machine learning",
+          "artificial intelligence",
+          "data science",
+          "human-computer interaction"
+        ],
+        "predicted_modalities": [
+          "quantitative analysis",
+          "qualitative research",
+          "interdisciplinary collaboration",
+          "user studies"
+        ]
+      }
+    }
+  },
+  {
+    "prediction": {
+      "professor": "Atoosa Kasirzadeh",
+      "affiliation": "",
+      "predicted_keywords": [
+        "machine learning",
+        "data privacy",
+        "algorithmic fairness",
+        "AI ethics",
+        "big data analytics"
+      ],
+      "predicted_subfields": [
+        "artificial intelligence",
+        "data science",
+        "computer science",
+        "social implications of technology"
+      ],
+      "predicted_modalities": [
+        "quantitative research",
+        "qualitative analysis",
+        "interdisciplinary studies",
+        "case studies"
+      ]
+    },
+    "verification": {
+      "keyword_precision": 0.4,
+      "keyword_recall": 0.027,
+      "subfield_precision": 1.0,
+      "subfield_recall": 0.16,
+      "modality_precision": 1.0,
+      "modality_recall": 0.154,
+      "overall_score": 0.198,
+      "matches": {
+        "keyword_matches": [
+          0,
+          0,
+          1,
+          1,
+          0
+        ],
+        "subfield_matches": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "modality_matches": [
+          0.25,
+          0.25,
+          0.5,
+          0.5
+        ]
+      },
+      "n_actual_items": 9,
+      "author_prediction": {
+        "professor": "Atoosa Kasirzadeh",
+        "affiliation": "",
+        "predicted_keywords": [
+          "machine learning",
+          "data privacy",
+          "algorithmic fairness",
+          "AI ethics",
+          "big data analytics"
+        ],
+        "predicted_subfields": [
+          "artificial intelligence",
+          "data science",
+          "computer science",
+          "social implications of technology"
+        ],
+        "predicted_modalities": [
+          "quantitative research",
+          "qualitative analysis",
+          "interdisciplinary studies",
+          "case studies"
+        ]
+      }
+    }
+  },
+  {
+    "prediction": {
+      "professor": "Katarzyna Nowaczyk-Basińska",
+      "affiliation": "",
+      "predicted_keywords": [
+        "sustainable development",
+        "environmental policy",
+        "climate change adaptation",
+        "renewable energy",
+        "social equity"
+      ],
+      "predicted_subfields": [
+        "environmental science",
+        "public policy",
+        "sustainability studies",
+        "climate justice"
+      ],
+      "predicted_modalities": [
+        "qualitative research",
+        "case studies",
+        "policy analysis",
+        "interdisciplinary collaboration"
+      ]
+    },
+    "verification": null,
+    "error": "no 2025 papers found"
+  },
+  {
+    "prediction": {
+      "professor": "Emma Pierson",
+      "affiliation": "Harvard University",
+      "predicted_keywords": [
+        "data science",
+        "health equity",
+        "machine learning",
+        "public health",
+        "social determinants of health"
+      ],
+      "predicted_subfields": [
+        "biostatistics",
+        "epidemiology",
+        "health informatics",
+        "computational social science"
+      ],
+      "predicted_modalities": [
+        "quantitative analysis",
+        "statistical modeling",
+        "data visualization",
+        "interdisciplinary collaboration"
+      ]
+    },
+    "verification": null,
+    "error": "no 2025 papers found"
+  },
+  {
+    "prediction": {
+      "professor": "Nicolas Papernot",
+      "affiliation": "University of Toronto",
+      "predicted_keywords": [
+        "adversarial machine learning",
+        "privacy-preserving AI",
+        "federated learning",
+        "robustness in AI",
+        "secure machine learning"
+      ],
+      "predicted_subfields": [
+        "machine learning",
+        "cybersecurity",
+        "artificial intelligence",
+        "data privacy",
+        "algorithmic fairness"
+      ],
+      "predicted_modalities": [
+        "theoretical research",
+        "empirical studies",
+        "algorithm development",
+        "software tools",
+        "policy analysis"
+      ]
+    },
+    "verification": null,
+    "error": "no 2025 papers found"
+  },
+  {
+    "prediction": {
+      "professor": "Daniel Rock",
+      "affiliation": "University of Chicago",
+      "predicted_keywords": [
+        "machine learning",
+        "economic modeling",
+        "data-driven decision making",
+        "algorithmic fairness",
+        "policy analysis"
+      ],
+      "predicted_subfields": [
+        "economics",
+        "computer science",
+        "public policy",
+        "data science"
+      ],
+      "predicted_modalities": [
+        "quantitative analysis",
+        "simulation modeling",
+        "empirical research",
+        "interdisciplinary collaboration"
+      ]
+    },
+    "verification": null,
+    "error": "no 2025 papers found"
+  },
+  {
+    "prediction": {
+      "professor": "Danish Pruthi",
+      "affiliation": "",
+      "predicted_keywords": [
+        "machine learning",
+        "artificial intelligence",
+        "data analytics",
+        "predictive modeling",
+        "big data"
+      ],
+      "predicted_subfields": [
+        "computer science",
+        "data science",
+        "bioinformatics",
+        "health informatics"
+      ],
+      "predicted_modalities": [
+        "quantitative analysis",
+        "algorithm development",
+        "statistical modeling"
+      ]
+    },
+    "verification": {
+      "keyword_precision": 0.0,
+      "keyword_recall": 0.0,
+      "subfield_precision": 0.25,
+      "subfield_recall": 0.25,
+      "modality_precision": 0.0,
+      "modality_recall": 0.0,
+      "overall_score": 0.083,
+      "matches": {
+        "keyword_matches": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "subfield_matches": [
+          1,
+          0,
+          0,
+          0
+        ],
+        "modality_matches": [
+          0,
+          0,
+          0
+        ]
+      },
+      "n_actual_items": 1,
+      "author_prediction": {
+        "professor": "Danish Pruthi",
+        "affiliation": "",
+        "predicted_keywords": [
+          "machine learning",
+          "artificial intelligence",
+          "data analytics",
+          "predictive modeling",
+          "big data"
+        ],
+        "predicted_subfields": [
+          "computer science",
+          "data science",
+          "bioinformatics",
+          "health informatics"
+        ],
+        "predicted_modalities": [
+          "quantitative analysis",
+          "algorithm development",
+          "statistical modeling"
+        ]
+      }
+    }
+  },
+  {
+    "prediction": {
+      "professor": "Jacob Steinhardt",
+      "affiliation": "University of California, Berkeley",
+      "predicted_keywords": [
+        "robustness",
+        "machine learning",
+        "adversarial attacks",
+        "causal inference",
+        "AI safety"
+      ],
+      "predicted_subfields": [
+        "artificial intelligence",
+        "machine learning",
+        "statistics",
+        "causal reasoning"
+      ],
+      "predicted_modalities": [
+        "theoretical analysis",
+        "empirical studies",
+        "algorithm development",
+        "interdisciplinary research"
+      ]
+    },
+    "verification": null,
+    "error": "no 2025 papers found"
+  },
+  {
+    "prediction": {
+      "professor": "Kai Wang",
+      "affiliation": "University of California, Berkeley",
+      "predicted_keywords": [
+        "machine learning",
+        "artificial intelligence",
+        "data privacy",
+        "algorithmic fairness",
+        "deep learning"
+      ],
+      "predicted_subfields": [
+        "computer science",
+        "data science",
+        "ethics in AI",
+        "human-computer interaction"
+      ],
+      "predicted_modalities": [
+        "theoretical research",
+        "empirical studies",
+        "software development",
+        "interdisciplinary collaboration"
+      ]
+    },
+    "verification": null,
+    "error": "no 2025 papers found"
+  },
+  {
+    "prediction": {
+      "professor": "Gege Wen",
+      "affiliation": "University of California, Berkeley",
+      "predicted_keywords": [
+        "machine learning",
+        "data science",
+        "artificial intelligence",
+        "sustainable energy",
+        "smart cities"
+      ],
+      "predicted_subfields": [
+        "computational intelligence",
+        "environmental informatics",
+        "urban computing",
+        "energy systems",
+        "big data analytics"
+      ],
+      "predicted_modalities": [
+        "quantitative analysis",
+        "simulation modeling",
+        "interdisciplinary collaboration",
+        "real-time data processing",
+        "visualization techniques"
+      ]
+    },
+    "verification": null,
+    "error": "no 2025 papers found"
+  },
+  {
+    "prediction": {
+      "professor": "Haifeng Xu",
+      "affiliation": "Tsinghua University",
+      "predicted_keywords": [
+        "artificial intelligence",
+        "machine learning",
+        "natural language processing",
+        "data mining",
+        "big data analytics"
+      ],
+      "predicted_subfields": [
+        "AI ethics",
+        "deep learning",
+        "human-computer interaction",
+        "computational linguistics"
+      ],
+      "predicted_modalities": [
+        "text analysis",
+        "image recognition",
+        "speech processing",
+        "multimodal learning"
+      ]
+    },
+    "verification": {
+      "keyword_precision": 0.0,
+      "keyword_recall": 0.0,
+      "subfield_precision": 0.0,
+      "subfield_recall": 0.0,
+      "modality_precision": 0.0,
+      "modality_recall": 0.0,
+      "overall_score": 0.0,
+      "matches": {
+        "keyword_matches": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "subfield_matches": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "modality_matches": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "n_actual_items": 1,
+      "author_prediction": {
+        "professor": "Haifeng Xu",
+        "affiliation": "Tsinghua University",
+        "predicted_keywords": [
+          "artificial intelligence",
+          "machine learning",
+          "natural language processing",
+          "data mining",
+          "big data analytics"
+        ],
+        "predicted_subfields": [
+          "AI ethics",
+          "deep learning",
+          "human-computer interaction",
+          "computational linguistics"
+        ],
+        "predicted_modalities": [
+          "text analysis",
+          "image recognition",
+          "speech processing",
+          "multimodal learning"
+        ]
+      }
+    }
+  },
+  {
+    "prediction": {
+      "professor": "Erik Brynjolfsson",
+      "affiliation": "Massachusetts Institute of Technology (MIT)",
+      "predicted_keywords": [
+        "artificial intelligence",
+        "digital economy",
+        "machine learning",
+        "productivity",
+        "data-driven decision making"
+      ],
+      "predicted_subfields": [
+        "economics of technology",
+        "information systems",
+        "business analytics",
+        "innovation management"
+      ],
+      "predicted_modalities": [
+        "empirical research",
+        "case studies",
+        "quantitative analysis",
+        "policy analysis"
+      ]
+    },
+    "verification": null,
+    "error": "no 2025 papers found"
+  },
+  {
+    "prediction": {
+      "professor": "Percy Liang",
+      "affiliation": "Stanford University",
+      "predicted_keywords": [
+        "natural language processing",
+        "machine learning",
+        "AI ethics",
+        "few-shot learning",
+        "language models"
+      ],
+      "predicted_subfields": [
+        "artificial intelligence",
+        "computational linguistics",
+        "human-computer interaction"
+      ],
+      "predicted_modalities": [
+        "text",
+        "speech",
+        "multimodal AI"
+      ]
+    },
+    "verification": null,
+    "error": "no 2025 papers found"
+  },
+  {
+    "prediction": {
+      "professor": "Daniela Rus",
+      "affiliation": "Massachusetts Institute of Technology (MIT)",
+      "predicted_keywords": [
+        "robotics",
+        "artificial intelligence",
+        "autonomous systems",
+        "machine learning",
+        "human-robot interaction"
+      ],
+      "predicted_subfields": [
+        "robotics engineering",
+        "AI ethics",
+        "smart manufacturing",
+        "autonomous vehicles",
+        "robotic perception"
+      ],
+      "predicted_modalities": [
+        "simulation",
+        "hardware development",
+        "software algorithms",
+        "data analysis",
+        "human-centered design"
+      ]
+    },
+    "verification": null,
+    "error": "no 2025 papers found"
+  },
+  {
+    "prediction": {
+      "professor": "John Tasioulas",
+      "affiliation": "University of Oxford",
+      "predicted_keywords": [
+        "human rights",
+        "moral philosophy",
+        "global justice",
+        "ethical theory",
+        "international law"
+      ],
+      "predicted_subfields": [
+        "philosophy of law",
+        "applied ethics",
+        "political philosophy",
+        "human rights law"
+      ],
+      "predicted_modalities": [
+        "interdisciplinary research",
+        "theoretical frameworks",
+        "case studies",
+        "policy analysis"
+      ]
+    },
+    "verification": null,
+    "error": "no 2025 papers found"
+  },
+  {
+    "prediction": {
+      "professor": "Stuart Russell",
+      "affiliation": "University of California, Berkeley",
+      "predicted_keywords": [
+        "artificial intelligence",
+        "machine learning",
+        "AI safety",
+        "human-AI collaboration",
+        "ethics in AI"
+      ],
+      "predicted_subfields": [
+        "AI alignment",
+        "reinforcement learning",
+        "explainable AI",
+        "autonomous systems",
+        "AI policy"
+      ],
+      "predicted_modalities": [
+        "theoretical frameworks",
+        "empirical studies",
+        "simulation models",
+        "interdisciplinary research",
+        "public engagement"
+      ]
+    },
+    "verification": null,
+    "error": "no 2025 papers found"
+  },
+  {
+    "prediction": {
+      "professor": "Gissella Bejarano",
+      "affiliation": "",
+      "predicted_keywords": [
+        "sustainable agriculture",
+        "climate change adaptation",
+        "agroecology",
+        "food security",
+        "biodiversity conservation"
+      ],
+      "predicted_subfields": [
+        "environmental science",
+        "agricultural science",
+        "sustainability studies",
+        "ecology"
+      ],
+      "predicted_modalities": [
+        "field experiments",
+        "data analysis",
+        "modeling and simulation",
+        "community engagement"
+      ]
+    },
+    "verification": null,
+    "error": "no 2025 papers found"
+  },
+  {
+    "prediction": {
+      "professor": "Regina Barzilay",
+      "affiliation": "MIT",
+      "predicted_keywords": [
+        "natural language processing",
+        "machine learning",
+        "healthcare applications",
+        "AI ethics",
+        "transformer models"
+      ],
+      "predicted_subfields": [
+        "artificial intelligence",
+        "computational linguistics",
+        "biomedical informatics",
+        "data science"
+      ],
+      "predicted_modalities": [
+        "text analysis",
+        "deep learning",
+        "predictive modeling",
+        "interdisciplinary research"
+      ]
+    },
+    "verification": null,
+    "error": "no 2025 papers found"
+  },
+  {
+    "prediction": {
+      "professor": "Latanya Sweeney",
+      "affiliation": "Harvard University",
+      "predicted_keywords": [
+        "data privacy",
+        "algorithmic fairness",
+        "health data",
+        "AI ethics",
+        "de-identification",
+        "social justice",
+        "big data",
+        "machine learning"
+      ],
+      "predicted_subfields": [
+        "data science",
+        "public health informatics",
+        "computer science",
+        "social policy",
+        "ethics in technology"
+      ],
+      "predicted_modalities": [
+        "quantitative analysis",
+        "qualitative research",
+        "case studies",
+        "policy analysis",
+        "machine learning models"
+      ]
+    },
+    "verification": null,
+    "error": "no 2025 papers found"
+  },
+  {
+    "prediction": {
+      "professor": "Adji Bousso Dieng",
+      "affiliation": "University of California, Berkeley",
+      "predicted_keywords": [
+        "machine learning",
+        "causal inference",
+        "Bayesian methods",
+        "neural networks",
+        "data privacy"
+      ],
+      "predicted_subfields": [
+        "artificial intelligence",
+        "statistics",
+        "computational biology",
+        "social network analysis"
+      ],
+      "predicted_modalities": [
+        "theoretical research",
+        "empirical studies",
+        "algorithm development",
+        "interdisciplinary collaboration"
+      ]
+    },
+    "verification": {
+      "keyword_precision": 0.4,
+      "keyword_recall": 0.061,
+      "subfield_precision": 0.25,
+      "subfield_recall": 0.083,
+      "modality_precision": 1.0,
+      "modality_recall": 0.286,
+      "overall_score": 0.225,
+      "matches": {
+        "keyword_matches": [
+          1,
+          0,
+          0,
+          1,
+          0
+        ],
+        "subfield_matches": [
+          1,
+          0,
+          0,
+          0
+        ],
+        "modality_matches": [
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "n_actual_items": 5,
+      "author_prediction": {
+        "professor": "Adji Bousso Dieng",
+        "affiliation": "University of California, Berkeley",
+        "predicted_keywords": [
+          "machine learning",
+          "causal inference",
+          "Bayesian methods",
+          "neural networks",
+          "data privacy"
+        ],
+        "predicted_subfields": [
+          "artificial intelligence",
+          "statistics",
+          "computational biology",
+          "social network analysis"
+        ],
+        "predicted_modalities": [
+          "theoretical research",
+          "empirical studies",
+          "algorithm development",
+          "interdisciplinary collaboration"
+        ]
+      }
+    }
+  },
+  {
+    "prediction": {
+      "professor": "Anton Korinek",
+      "affiliation": "The University of Virginia",
+      "predicted_keywords": [
+        "digital economy",
+        "regulation",
+        "inequality",
+        "behavioral economics",
+        "artificial intelligence",
+        "blockchain",
+        "data privacy"
+      ],
+      "predicted_subfields": [
+        "economics",
+        "public policy",
+        "finance",
+        "technology and society",
+        "behavioral finance"
+      ],
+      "predicted_modalities": [
+        "empirical research",
+        "theoretical modeling",
+        "policy analysis",
+        "case studies",
+        "interdisciplinary collaboration"
+      ]
+    },
+    "verification": {
+      "keyword_precision": 0.143,
+      "keyword_recall": 0.111,
+      "subfield_precision": 0.2,
+      "subfield_recall": 0.25,
+      "modality_precision": 0.2,
+      "modality_recall": 0.333,
+      "overall_score": 0.199,
+      "matches": {
+        "keyword_matches": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "subfield_matches": [
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        "modality_matches": [
+          0,
+          0,
+          1,
+          0,
+          0
+        ]
+      },
+      "n_actual_items": 1,
+      "author_prediction": {
+        "professor": "Anton Korinek",
+        "affiliation": "The University of Virginia",
+        "predicted_keywords": [
+          "digital economy",
+          "regulation",
+          "inequality",
+          "behavioral economics",
+          "artificial intelligence",
+          "blockchain",
+          "data privacy"
+        ],
+        "predicted_subfields": [
+          "economics",
+          "public policy",
+          "finance",
+          "technology and society",
+          "behavioral finance"
+        ],
+        "predicted_modalities": [
+          "empirical research",
+          "theoretical modeling",
+          "policy analysis",
+          "case studies",
+          "interdisciplinary collaboration"
+        ]
+      }
+    }
+  },
+  {
+    "prediction": {
+      "professor": "Connor Coley",
+      "affiliation": "Massachusetts Institute of Technology (MIT)",
+      "predicted_keywords": [
+        "sustainable chemistry",
+        "catalysis",
+        "reaction optimization",
+        "machine learning",
+        "green chemistry"
+      ],
+      "predicted_subfields": [
+        "organic chemistry",
+        "materials science",
+        "chemical engineering"
+      ],
+      "predicted_modalities": [
+        "experimental research",
+        "computational modeling",
+        "data analysis"
+      ]
+    },
+    "verification": {
+      "keyword_precision": 0.2,
+      "keyword_recall": 0.008,
+      "subfield_precision": 0.333,
+      "subfield_recall": 0.024,
+      "modality_precision": 0.0,
+      "modality_recall": 0.0,
+      "overall_score": 0.02,
+      "matches": {
+        "keyword_matches": [
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        "subfield_matches": [
+          1,
+          0,
+          0
+        ],
+        "modality_matches": [
+          0,
+          0,
+          0
+        ]
+      },
+      "n_actual_items": 19,
+      "author_prediction": {
+        "professor": "Connor Coley",
+        "affiliation": "Massachusetts Institute of Technology (MIT)",
+        "predicted_keywords": [
+          "sustainable chemistry",
+          "catalysis",
+          "reaction optimization",
+          "machine learning",
+          "green chemistry"
+        ],
+        "predicted_subfields": [
+          "organic chemistry",
+          "materials science",
+          "chemical engineering"
+        ],
+        "predicted_modalities": [
+          "experimental research",
+          "computational modeling",
+          "data analysis"
+        ]
+      }
+    }
+  },
+  {
+    "prediction": {
+      "professor": "Sina Fazelpour",
+      "affiliation": "University of California, Irvine",
+      "predicted_keywords": [
+        "AI ethics",
+        "algorithmic fairness",
+        "machine learning",
+        "social implications of technology",
+        "data privacy"
+      ],
+      "predicted_subfields": [
+        "Artificial Intelligence",
+        "Ethics in Technology",
+        "Data Science",
+        "Human-Computer Interaction"
+      ],
+      "predicted_modalities": [
+        "Theoretical frameworks",
+        "Empirical studies",
+        "Policy analysis",
+        "Interdisciplinary collaborations"
+      ]
+    },
+    "verification": {
+      "keyword_precision": 0.0,
+      "keyword_recall": 0.0,
+      "subfield_precision": 0.75,
+      "subfield_recall": 0.6,
+      "modality_precision": 0.25,
+      "modality_recall": 0.25,
+      "overall_score": 0.306,
+      "matches": {
+        "keyword_matches": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "subfield_matches": [
+          1,
+          0,
+          1,
+          1
+        ],
+        "modality_matches": [
+          0,
+          1,
+          0,
+          0
+        ]
+      },
+      "n_actual_items": 1,
+      "author_prediction": {
+        "professor": "Sina Fazelpour",
+        "affiliation": "University of California, Irvine",
+        "predicted_keywords": [
+          "AI ethics",
+          "algorithmic fairness",
+          "machine learning",
+          "social implications of technology",
+          "data privacy"
+        ],
+        "predicted_subfields": [
+          "Artificial Intelligence",
+          "Ethics in Technology",
+          "Data Science",
+          "Human-Computer Interaction"
+        ],
+        "predicted_modalities": [
+          "Theoretical frameworks",
+          "Empirical studies",
+          "Policy analysis",
+          "Interdisciplinary collaborations"
+        ]
+      }
+    }
+  },
+  {
+    "prediction": {
+      "professor": "Dylan Hadfield-Menell",
+      "affiliation": "University of California, Berkeley",
+      "predicted_keywords": [
+        "AI alignment",
+        "machine learning",
+        "ethical AI",
+        "human-AI collaboration",
+        "decision theory"
+      ],
+      "predicted_subfields": [
+        "Artificial Intelligence",
+        "Machine Learning",
+        "Ethics in AI",
+        "Robotics",
+        "Cognitive Science"
+      ],
+      "predicted_modalities": [
+        "Theoretical research",
+        "Empirical studies",
+        "Interdisciplinary collaboration",
+        "Workshops and conferences",
+        "Public engagement"
+      ]
+    },
+    "verification": null,
+    "error": "no 2025 papers found"
+  },
+  {
+    "prediction": {
+      "professor": "Priya Donti",
+      "affiliation": "MIT",
+      "predicted_keywords": [
+        "machine learning",
+        "climate change",
+        "energy systems",
+        "sustainability",
+        "data-driven decision making"
+      ],
+      "predicted_subfields": [
+        "artificial intelligence",
+        "environmental science",
+        "renewable energy",
+        "optimization",
+        "policy analysis"
+      ],
+      "predicted_modalities": [
+        "computational modeling",
+        "data analysis",
+        "simulation",
+        "interdisciplinary collaboration",
+        "real-time monitoring"
+      ]
+    },
+    "verification": {
+      "keyword_precision": 0.0,
+      "keyword_recall": 0.0,
+      "subfield_precision": 0.6,
+      "subfield_recall": 0.375,
+      "modality_precision": 0.2,
+      "modality_recall": 0.125,
+      "overall_score": 0.205,
+      "matches": {
+        "keyword_matches": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "subfield_matches": [
+          1,
+          1,
+          1,
+          0,
+          0
+        ],
+        "modality_matches": [
+          0,
+          0,
+          1
+        ]
+      },
+      "n_actual_items": 3,
+      "author_prediction": {
+        "professor": "Priya Donti",
+        "affiliation": "MIT",
+        "predicted_keywords": [
+          "machine learning",
+          "climate change",
+          "energy systems",
+          "sustainability",
+          "data-driven decision making"
+        ],
+        "predicted_subfields": [
+          "artificial intelligence",
+          "environmental science",
+          "renewable energy",
+          "optimization",
+          "policy analysis"
+        ],
+        "predicted_modalities": [
+          "computational modeling",
+          "data analysis",
+          "simulation",
+          "interdisciplinary collaboration",
+          "real-time monitoring"
+        ]
+      }
+    }
+  },
+  {
+    "prediction": {
+      "professor": "Sam Kriegman",
+      "affiliation": "University of California, Santa Barbara",
+      "predicted_keywords": [
+        "biological robotics",
+        "evolutionary algorithms",
+        "self-organization",
+        "machine learning",
+        "adaptive systems"
+      ],
+      "predicted_subfields": [
+        "robotics",
+        "biomimicry",
+        "artificial intelligence",
+        "complex systems",
+        "evolutionary biology"
+      ],
+      "predicted_modalities": [
+        "simulation",
+        "experimental robotics",
+        "data analysis",
+        "theoretical modeling",
+        "interdisciplinary collaboration"
+      ]
+    },
+    "verification": null,
+    "error": "no 2025 papers found"
+  },
+  {
+    "prediction": {
+      "professor": "Paola Ricaurte Quijano",
+      "affiliation": "Tecnológico de Monterrey",
+      "predicted_keywords": [
+        "sustainable development",
+        "urban resilience",
+        "climate change adaptation",
+        "social innovation",
+        "community engagement"
+      ],
+      "predicted_subfields": [
+        "environmental science",
+        "urban studies",
+        "sociology",
+        "public policy",
+        "sustainable engineering"
+      ],
+      "predicted_modalities": [
+        "qualitative research",
+        "case studies",
+        "participatory action research",
+        "data analytics",
+        "interdisciplinary collaboration"
+      ]
+    },
+    "verification": null,
+    "error": "no 2025 papers found"
+  },
+  {
+    "prediction": {
+      "professor": "Mitesh Khapra",
+      "affiliation": "IIT Madras",
+      "predicted_keywords": [
+        "machine learning",
+        "natural language processing",
+        "AI ethics",
+        "data privacy",
+        "automated reasoning"
+      ],
+      "predicted_subfields": [
+        "artificial intelligence",
+        "computer science",
+        "data science",
+        "human-computer interaction"
+      ],
+      "predicted_modalities": [
+        "algorithm development",
+        "software tools",
+        "theoretical frameworks",
+        "empirical studies"
+      ]
+    },
+    "verification": {
+      "keyword_precision": 0.0,
+      "keyword_recall": 0.0,
+      "subfield_precision": 0.5,
+      "subfield_recall": 0.105,
+      "modality_precision": 0.0,
+      "modality_recall": 0.0,
+      "overall_score": 0.058,
+      "matches": {
+        "keyword_matches": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "subfield_matches": [
+          1,
+          1,
+          0,
+          0
+        ],
+        "modality_matches": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "n_actual_items": 11,
+      "author_prediction": {
+        "professor": "Mitesh Khapra",
+        "affiliation": "IIT Madras",
+        "predicted_keywords": [
+          "machine learning",
+          "natural language processing",
+          "AI ethics",
+          "data privacy",
+          "automated reasoning"
+        ],
+        "predicted_subfields": [
+          "artificial intelligence",
+          "computer science",
+          "data science",
+          "human-computer interaction"
+        ],
+        "predicted_modalities": [
+          "algorithm development",
+          "software tools",
+          "theoretical frameworks",
+          "empirical studies"
+        ]
+      }
+    }
+  },
+  {
+    "prediction": {
+      "professor": "Albert Gu",
+      "affiliation": "Carnegie Mellon University",
+      "predicted_keywords": [
+        "machine learning",
+        "artificial intelligence",
+        "data privacy",
+        "algorithmic fairness",
+        "human-computer interaction"
+      ],
+      "predicted_subfields": [
+        "computer science",
+        "machine learning",
+        "human-centered AI",
+        "data ethics",
+        "social computing"
+      ],
+      "predicted_modalities": [
+        "theoretical research",
+        "empirical studies",
+        "algorithm development",
+        "user experience design",
+        "policy analysis"
+      ]
+    },
+    "verification": null,
+    "error": "no 2025 papers found"
+  },
+  {
+    "prediction": {
+      "professor": "Jennifer Ngadiuba",
+      "affiliation": "",
+      "predicted_keywords": [
+        "machine learning",
+        "data science",
+        "healthcare analytics",
+        "predictive modeling",
+        "big data"
+      ],
+      "predicted_subfields": [
+        "artificial intelligence",
+        "bioinformatics",
+        "health informatics",
+        "statistical analysis"
+      ],
+      "predicted_modalities": [
+        "quantitative research",
+        "computational modeling",
+        "data visualization",
+        "algorithm development"
+      ]
+    },
+    "verification": null,
+    "error": "no 2025 papers found"
+  },
+  {
+    "prediction": {
+      "professor": "Aditi Raghunathan",
+      "affiliation": "Stanford University",
+      "predicted_keywords": [
+        "machine learning",
+        "healthcare",
+        "personalized medicine",
+        "data privacy",
+        "algorithmic fairness"
+      ],
+      "predicted_subfields": [
+        "artificial intelligence",
+        "bioinformatics",
+        "computational biology",
+        "health informatics"
+      ],
+      "predicted_modalities": [
+        "quantitative analysis",
+        "statistical modeling",
+        "data visualization",
+        "interdisciplinary collaboration"
+      ]
+    },
+    "verification": {
+      "keyword_precision": 0.0,
+      "keyword_recall": 0.0,
+      "subfield_precision": 0.25,
+      "subfield_recall": 0.143,
+      "modality_precision": 0.0,
+      "modality_recall": 0.0,
+      "overall_score": 0.061,
+      "matches": {
+        "keyword_matches": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "subfield_matches": [
+          1,
+          0,
+          0,
+          0
+        ],
+        "modality_matches": [
+          0,
+          0,
+          0
+        ]
+      },
+      "n_actual_items": 3,
+      "author_prediction": {
+        "professor": "Aditi Raghunathan",
+        "affiliation": "Stanford University",
+        "predicted_keywords": [
+          "machine learning",
+          "healthcare",
+          "personalized medicine",
+          "data privacy",
+          "algorithmic fairness"
+        ],
+        "predicted_subfields": [
+          "artificial intelligence",
+          "bioinformatics",
+          "computational biology",
+          "health informatics"
+        ],
+        "predicted_modalities": [
+          "quantitative analysis",
+          "statistical modeling",
+          "data visualization",
+          "interdisciplinary collaboration"
+        ]
+      }
+    }
+  },
+  {
+    "prediction": {
+      "professor": "Zhang Linghan",
+      "affiliation": "China University of Political Science and Law",
+      "predicted_keywords": [
+        "legal reform",
+        "human rights",
+        "cyber law",
+        "environmental law",
+        "international relations"
+      ],
+      "predicted_subfields": [
+        "law and technology",
+        "constitutional law",
+        "international law",
+        "human rights law",
+        "environmental law"
+      ],
+      "predicted_modalities": [
+        "empirical research",
+        "policy analysis",
+        "comparative studies",
+        "case law analysis",
+        "interdisciplinary approaches"
+      ]
+    },
+    "verification": {
+      "keyword_precision": 0.0,
+      "keyword_recall": 0.0,
+      "subfield_precision": 0.0,
+      "subfield_recall": 0.0,
+      "modality_precision": 0.0,
+      "modality_recall": 0.0,
+      "overall_score": 0.0,
+      "matches": {
+        "keyword_matches": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "subfield_matches": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "modality_matches": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "n_actual_items": 1,
+      "author_prediction": {
+        "professor": "Zhang Linghan",
+        "affiliation": "China University of Political Science and Law",
+        "predicted_keywords": [
+          "legal reform",
+          "human rights",
+          "cyber law",
+          "environmental law",
+          "international relations"
+        ],
+        "predicted_subfields": [
+          "law and technology",
+          "constitutional law",
+          "international law",
+          "human rights law",
+          "environmental law"
+        ],
+        "predicted_modalities": [
+          "empirical research",
+          "policy analysis",
+          "comparative studies",
+          "case law analysis",
+          "interdisciplinary approaches"
+        ]
+      }
+    }
+  },
+  {
+    "prediction": {
+      "professor": "Elizaveta Semenova",
+      "affiliation": "National Research University Higher School of Economics",
+      "predicted_keywords": [
+        "digital economy",
+        "socioeconomic impact",
+        "data analytics",
+        "artificial intelligence",
+        "sustainability"
+      ],
+      "predicted_subfields": [
+        "economics",
+        "data science",
+        "sustainability studies",
+        "public policy"
+      ],
+      "predicted_modalities": [
+        "quantitative research",
+        "case studies",
+        "policy analysis",
+        "machine learning applications"
+      ]
+    },
+    "verification": null,
+    "error": "no 2025 papers found"
+  },
+  {
+    "prediction": {
+      "professor": "Ziad Obermeyer",
+      "affiliation": "University of California, Berkeley",
+      "predicted_keywords": [
+        "machine learning",
+        "healthcare",
+        "predictive analytics",
+        "AI ethics",
+        "health disparities"
+      ],
+      "predicted_subfields": [
+        "health informatics",
+        "artificial intelligence in medicine",
+        "public health",
+        "data science"
+      ],
+      "predicted_modalities": [
+        "quantitative research",
+        "computational modeling",
+        "interventional studies",
+        "systematic reviews"
+      ]
+    },
+    "verification": null,
+    "error": "no 2025 papers found"
+  },
+  {
+    "prediction": {
+      "professor": "Fei-Fei Li",
+      "affiliation": "Stanford University",
+      "predicted_keywords": [
+        "artificial intelligence",
+        "computer vision",
+        "machine learning",
+        "human-centered AI",
+        "neurosymbolic AI",
+        "ethical AI",
+        "multimodal learning"
+      ],
+      "predicted_subfields": [
+        "AI ethics",
+        "deep learning",
+        "cognitive computing",
+        "human-computer interaction",
+        "robotics"
+      ],
+      "predicted_modalities": [
+        "visual data",
+        "textual data",
+        "audio data",
+        "sensor data",
+        "interactive systems"
+      ]
+    },
+    "verification": null,
+    "error": "no 2025 papers found"
+  },
+  {
+    "prediction": {
+      "professor": "Karina Vold",
+      "affiliation": "University of Oslo",
+      "predicted_keywords": [
+        "sustainable development",
+        "climate change",
+        "renewable energy",
+        "environmental policy",
+        "social equity"
+      ],
+      "predicted_subfields": [
+        "environmental science",
+        "sustainability studies",
+        "public policy",
+        "socio-environmental systems"
+      ],
+      "predicted_modalities": [
+        "quantitative analysis",
+        "case studies",
+        "policy analysis",
+        "interdisciplinary collaboration"
+      ]
+    },
+    "verification": {
+      "keyword_precision": 0.0,
+      "keyword_recall": 0.0,
+      "subfield_precision": 0.0,
+      "subfield_recall": 0.0,
+      "modality_precision": 0.0,
+      "modality_recall": 0.0,
+      "overall_score": 0.0,
+      "matches": {
+        "keyword_matches": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "subfield_matches": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "modality_matches": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "n_actual_items": 1,
+      "author_prediction": {
+        "professor": "Karina Vold",
+        "affiliation": "University of Oslo",
+        "predicted_keywords": [
+          "sustainable development",
+          "climate change",
+          "renewable energy",
+          "environmental policy",
+          "social equity"
+        ],
+        "predicted_subfields": [
+          "environmental science",
+          "sustainability studies",
+          "public policy",
+          "socio-environmental systems"
+        ],
+        "predicted_modalities": [
+          "quantitative analysis",
+          "case studies",
+          "policy analysis",
+          "interdisciplinary collaboration"
+        ]
+      }
+    }
+  },
+  {
+    "prediction": {
+      "professor": "Geoffrey Hinton",
+      "affiliation": "University of Toronto",
+      "predicted_keywords": [
+        "deep learning",
+        "neural networks",
+        "AI ethics",
+        "explainable AI",
+        "quantum computing",
+        "biological inspiration",
+        "unsupervised learning"
+      ],
+      "predicted_subfields": [
+        "artificial intelligence",
+        "machine learning",
+        "cognitive science",
+        "neuroscience",
+        "computer vision"
+      ],
+      "predicted_modalities": [
+        "theoretical research",
+        "empirical studies",
+        "algorithm development",
+        "interdisciplinary collaboration"
+      ]
+    },
+    "verification": null,
+    "error": "no 2025 papers found"
+  },
+  {
+    "prediction": {
+      "professor": "Bryan Wilder",
+      "affiliation": "University of California, Berkeley",
+      "predicted_keywords": [
+        "sustainable energy",
+        "renewable resources",
+        "energy storage",
+        "smart grids",
+        "climate change mitigation"
+      ],
+      "predicted_subfields": [
+        "energy systems",
+        "environmental science",
+        "sustainability studies",
+        "electrical engineering"
+      ],
+      "predicted_modalities": [
+        "experimental research",
+        "computational modeling",
+        "field studies",
+        "policy analysis"
+      ]
+    },
+    "verification": {
+      "keyword_precision": 0.0,
+      "keyword_recall": 0.0,
+      "subfield_precision": 0.0,
+      "subfield_recall": 0.0,
+      "modality_precision": 0.0,
+      "modality_recall": 0.0,
+      "overall_score": 0.0,
+      "matches": {
+        "keyword_matches": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "subfield_matches": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "modality_matches": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "n_actual_items": 2,
+      "author_prediction": {
+        "professor": "Bryan Wilder",
+        "affiliation": "University of California, Berkeley",
+        "predicted_keywords": [
+          "sustainable energy",
+          "renewable resources",
+          "energy storage",
+          "smart grids",
+          "climate change mitigation"
+        ],
+        "predicted_subfields": [
+          "energy systems",
+          "environmental science",
+          "sustainability studies",
+          "electrical engineering"
+        ],
+        "predicted_modalities": [
+          "experimental research",
+          "computational modeling",
+          "field studies",
+          "policy analysis"
+        ]
+      }
+    }
+  },
+  {
+    "prediction": {
+      "professor": "Qian Yang",
+      "affiliation": "Tsinghua University",
+      "predicted_keywords": [
+        "artificial intelligence",
+        "machine learning",
+        "data privacy",
+        "smart cities",
+        "sustainable development"
+      ],
+      "predicted_subfields": [
+        "AI ethics",
+        "urban informatics",
+        "data science",
+        "environmental technology"
+      ],
+      "predicted_modalities": [
+        "quantitative analysis",
+        "case studies",
+        "simulation modeling",
+        "interdisciplinary collaboration"
+      ]
+    },
+    "verification": null,
+    "error": "no 2025 papers found"
+  },
+  {
+    "prediction": {
+      "professor": "Yi Zeng",
+      "affiliation": "Chinese Academy of Sciences",
+      "predicted_keywords": [
+        "artificial intelligence",
+        "machine learning",
+        "neuroscience",
+        "cognitive computing",
+        "data science"
+      ],
+      "predicted_subfields": [
+        "AI ethics",
+        "human-computer interaction",
+        "neuroinformatics",
+        "computational neuroscience",
+        "social robotics"
+      ],
+      "predicted_modalities": [
+        "interdisciplinary research",
+        "collaborative projects",
+        "experimental studies",
+        "theoretical modeling",
+        "applied AI solutions"
+      ]
+    },
+    "verification": null,
+    "error": "no 2025 papers found"
+  },
+  {
+    "prediction": {
+      "professor": "John Zerilli",
+      "affiliation": "University of Michigan",
+      "predicted_keywords": [
+        "artificial intelligence",
+        "machine learning",
+        "data ethics",
+        "algorithmic fairness",
+        "social impact of technology"
+      ],
+      "predicted_subfields": [
+        "computer science",
+        "ethics in technology",
+        "human-computer interaction",
+        "data science"
+      ],
+      "predicted_modalities": [
+        "quantitative research",
+        "qualitative analysis",
+        "case studies",
+        "interdisciplinary collaboration"
+      ]
+    },
+    "verification": null,
+    "error": "no 2025 papers found"
+  },
+  {
+    "prediction": {
+      "professor": "Kate Crawford",
+      "affiliation": "USC Annenberg",
+      "predicted_keywords": [
+        "AI ethics",
+        "data justice",
+        "algorithmic bias",
+        "surveillance capitalism",
+        "social media impact",
+        "digital rights"
+      ],
+      "predicted_subfields": [
+        "Artificial Intelligence",
+        "Media Studies",
+        "Communication",
+        "Ethics in Technology",
+        "Data Science"
+      ],
+      "predicted_modalities": [
+        "Qualitative Research",
+        "Interdisciplinary Collaboration",
+        "Public Engagement",
+        "Policy Analysis",
+        "Critical Theory"
+      ]
+    },
+    "verification": null,
+    "error": "no 2025 papers found"
+  },
+  {
+    "prediction": {
+      "professor": "Baobao Zhang",
+      "affiliation": "Tsinghua University",
+      "predicted_keywords": [
+        "natural language processing",
+        "machine learning",
+        "multimodal AI",
+        "language understanding",
+        "AI ethics"
+      ],
+      "predicted_subfields": [
+        "computational linguistics",
+        "artificial intelligence",
+        "human-computer interaction",
+        "data science"
+      ],
+      "predicted_modalities": [
+        "text",
+        "audio",
+        "visual",
+        "interactive systems"
+      ]
+    },
+    "verification": null,
+    "error": "no 2025 papers found"
+  },
+  {
+    "prediction": {
+      "professor": "Yejin Choi",
+      "affiliation": "University of Washington",
+      "predicted_keywords": [
+        "natural language processing",
+        "machine learning",
+        "AI ethics",
+        "social impact of AI",
+        "language understanding"
+      ],
+      "predicted_subfields": [
+        "computational linguistics",
+        "artificial intelligence",
+        "human-computer interaction",
+        "social computing"
+      ],
+      "predicted_modalities": [
+        "text analysis",
+        "multimodal AI",
+        "interactive systems",
+        "data-driven research"
+      ]
+    },
+    "verification": null,
+    "error": "no 2025 papers found"
+  },
+  {
+    "prediction": {
+      "professor": "Huan Zhang",
+      "affiliation": "Stanford University",
+      "predicted_keywords": [
+        "machine learning",
+        "artificial intelligence",
+        "data privacy",
+        "algorithmic fairness",
+        "deep learning"
+      ],
+      "predicted_subfields": [
+        "computational social science",
+        "ethical AI",
+        "privacy-preserving machine learning",
+        "reinforcement learning"
+      ],
+      "predicted_modalities": [
+        "theoretical frameworks",
+        "empirical studies",
+        "algorithm development",
+        "interdisciplinary collaborations"
+      ]
+    },
+    "verification": null,
+    "error": "no 2025 papers found"
+  },
+  {
+    "prediction": {
+      "professor": "Emily M. Bender",
+      "affiliation": "University of Washington",
+      "predicted_keywords": [
+        "natural language processing",
+        "multilingual models",
+        "linguistic typology",
+        "ethical AI",
+        "language diversity",
+        "low-resource languages"
+      ],
+      "predicted_subfields": [
+        "computational linguistics",
+        "machine learning",
+        "AI ethics",
+        "sociolinguistics"
+      ],
+      "predicted_modalities": [
+        "text analysis",
+        "speech recognition",
+        "cross-linguistic studies",
+        "interactive AI systems"
+      ]
+    },
+    "verification": null,
+    "error": "no 2025 papers found"
+  },
+  {
+    "prediction": {
+      "professor": "Stuart Russell",
+      "affiliation": "University of California, Berkeley",
+      "predicted_keywords": [
+        "artificial intelligence",
+        "machine learning",
+        "ethics of AI",
+        "human-AI collaboration",
+        "explainable AI",
+        "AI safety",
+        "autonomous systems",
+        "general intelligence"
+      ],
+      "predicted_subfields": [
+        "AI ethics",
+        "machine learning",
+        "robotics",
+        "human-computer interaction",
+        "cognitive computing"
+      ],
+      "predicted_modalities": [
+        "theoretical research",
+        "empirical studies",
+        "algorithm development",
+        "policy analysis",
+        "interdisciplinary collaboration"
+      ]
+    },
+    "verification": null,
+    "error": "no 2025 papers found"
+  },
+  {
+    "prediction": {
+      "professor": "Arvind Narayanan",
+      "affiliation": "Princeton University",
+      "predicted_keywords": [
+        "privacy",
+        "machine learning",
+        "algorithmic fairness",
+        "data ethics",
+        "blockchain",
+        "AI governance"
+      ],
+      "predicted_subfields": [
+        "computer science",
+        "data science",
+        "information security",
+        "ethics in technology",
+        "artificial intelligence"
+      ],
+      "predicted_modalities": [
+        "theoretical research",
+        "empirical studies",
+        "policy analysis",
+        "software development",
+        "educational outreach"
+      ]
+    },
+    "verification": null,
+    "error": "no 2025 papers found"
+  },
+  {
+    "prediction": {
+      "professor": "David Autor",
+      "affiliation": "Massachusetts Institute of Technology (MIT)",
+      "predicted_keywords": [
+        "automation",
+        "labor market",
+        "income inequality",
+        "artificial intelligence",
+        "job displacement",
+        "skills training",
+        "economic policy"
+      ],
+      "predicted_subfields": [
+        "labor economics",
+        "public policy",
+        "technology and employment",
+        "economic inequality"
+      ],
+      "predicted_modalities": [
+        "empirical research",
+        "policy analysis",
+        "quantitative modeling",
+        "case studies"
+      ]
+    },
+    "verification": null,
+    "error": "no 2025 papers found"
+  },
+  {
+    "prediction": {
+      "professor": "Yejin Choi",
+      "affiliation": "University of Washington",
+      "predicted_keywords": [
+        "natural language processing",
+        "machine learning",
+        "AI ethics",
+        "multimodal learning",
+        "social impact of AI"
+      ],
+      "predicted_subfields": [
+        "computational linguistics",
+        "human-centered AI",
+        "explainable AI",
+        "sentiment analysis",
+        "dialogue systems"
+      ],
+      "predicted_modalities": [
+        "text",
+        "images",
+        "audio",
+        "video",
+        "interactive systems"
+      ]
+    },
+    "verification": null,
+    "error": "no 2025 papers found"
+  },
+  {
+    "prediction": {
+      "professor": "Carla Gomes",
+      "affiliation": "Cornell University",
+      "predicted_keywords": [
+        "machine learning",
+        "data science",
+        "computational sustainability",
+        "AI for social good",
+        "climate change",
+        "biodiversity",
+        "smart cities"
+      ],
+      "predicted_subfields": [
+        "artificial intelligence",
+        "environmental science",
+        "sustainability science",
+        "computational biology",
+        "urban informatics"
+      ],
+      "predicted_modalities": [
+        "data analysis",
+        "modeling and simulation",
+        "interdisciplinary collaboration",
+        "community engagement",
+        "policy development"
+      ]
+    },
+    "verification": null,
+    "error": "no 2025 papers found"
+  },
+  {
+    "prediction": {
+      "professor": "Roger Grosse",
+      "affiliation": "University of Toronto",
+      "predicted_keywords": [
+        "deep learning",
+        "machine learning",
+        "neural networks",
+        "explainable AI",
+        "robustness",
+        "generalization",
+        "unsupervised learning"
+      ],
+      "predicted_subfields": [
+        "artificial intelligence",
+        "computer vision",
+        "natural language processing",
+        "statistical learning",
+        "optimization"
+      ],
+      "predicted_modalities": [
+        "theoretical frameworks",
+        "empirical studies",
+        "algorithm development",
+        "software tools",
+        "data analysis"
+      ]
+    },
+    "verification": null,
+    "error": "no 2025 papers found"
+  },
+  {
+    "prediction": {
+      "professor": "Michael Wooldridge",
+      "affiliation": "University of Oxford",
+      "predicted_keywords": [
+        "multi-agent systems",
+        "artificial intelligence",
+        "game theory",
+        "autonomous agents",
+        "machine learning"
+      ],
+      "predicted_subfields": [
+        "AI ethics",
+        "distributed systems",
+        "human-agent interaction",
+        "algorithmic decision-making"
+      ],
+      "predicted_modalities": [
+        "theoretical frameworks",
+        "empirical studies",
+        "simulation models",
+        "interdisciplinary collaborations"
+      ]
+    },
+    "verification": null,
+    "error": "no 2025 papers found"
+  },
+  {
+    "prediction": {
+      "professor": "Sara Beery",
+      "affiliation": "California Institute of Technology",
+      "predicted_keywords": [
+        "machine learning",
+        "computer vision",
+        "ecological modeling",
+        "wildlife conservation",
+        "data-driven approaches"
+      ],
+      "predicted_subfields": [
+        "artificial intelligence",
+        "environmental science",
+        "bioinformatics",
+        "robotics",
+        "sustainable technology"
+      ],
+      "predicted_modalities": [
+        "image analysis",
+        "sensor data integration",
+        "predictive modeling",
+        "simulation",
+        "field studies"
+      ]
+    },
+    "verification": null,
+    "error": "no 2025 papers found"
+  },
+  {
+    "prediction": {
+      "professor": "Sarah Dean",
+      "affiliation": "University of California, Berkeley",
+      "predicted_keywords": [
+        "sustainable energy",
+        "renewable resources",
+        "climate change",
+        "energy storage",
+        "smart grids"
+      ],
+      "predicted_subfields": [
+        "environmental science",
+        "energy systems",
+        "sustainability studies",
+        "climate policy"
+      ],
+      "predicted_modalities": [
+        "quantitative analysis",
+        "modeling and simulation",
+        "field studies",
+        "policy analysis"
+      ]
+    },
+    "verification": null,
+    "error": "no 2025 papers found"
+  },
+  {
+    "prediction": {
+      "professor": "Tim Dettmers",
+      "affiliation": "University of Washington",
+      "predicted_keywords": [
+        "deep learning",
+        "neural networks",
+        "AI efficiency",
+        "model compression",
+        "sustainability in AI"
+      ],
+      "predicted_subfields": [
+        "machine learning",
+        "artificial intelligence",
+        "computational efficiency",
+        "environmental impact of technology"
+      ],
+      "predicted_modalities": [
+        "theoretical research",
+        "empirical studies",
+        "algorithm development",
+        "software tools"
+      ]
+    },
+    "verification": null,
+    "error": "no 2025 papers found"
+  },
+  {
+    "prediction": {
+      "professor": "Simon Du",
+      "affiliation": "University of California, Berkeley",
+      "predicted_keywords": [
+        "machine learning",
+        "data science",
+        "sustainability",
+        "energy systems",
+        "optimization"
+      ],
+      "predicted_subfields": [
+        "artificial intelligence",
+        "environmental science",
+        "operations research",
+        "renewable energy",
+        "smart grids"
+      ],
+      "predicted_modalities": [
+        "computational modeling",
+        "statistical analysis",
+        "algorithm development",
+        "simulation studies",
+        "interdisciplinary collaboration"
+      ]
+    },
+    "verification": null,
+    "error": "no 2025 papers found"
+  },
+  {
+    "prediction": {
+      "professor": "Gabriele Farina",
+      "affiliation": "",
+      "predicted_keywords": [
+        "machine learning",
+        "data science",
+        "artificial intelligence",
+        "big data",
+        "predictive analytics"
+      ],
+      "predicted_subfields": [
+        "computational statistics",
+        "data mining",
+        "algorithm development",
+        "statistical modeling"
+      ],
+      "predicted_modalities": [
+        "quantitative analysis",
+        "simulation studies",
+        "software development",
+        "data visualization"
+      ]
+    },
+    "verification": {
+      "keyword_precision": 0.0,
+      "keyword_recall": 0.0,
+      "subfield_precision": 0.25,
+      "subfield_recall": 0.111,
+      "modality_precision": 0.25,
+      "modality_recall": 0.2,
+      "overall_score": 0.125,
+      "matches": {
+        "keyword_matches": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "subfield_matches": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "modality_matches": [
+          0,
+          0,
+          1,
+          0
+        ]
+      },
+      "n_actual_items": 3,
+      "author_prediction": {
+        "professor": "Gabriele Farina",
+        "affiliation": "",
+        "predicted_keywords": [
+          "machine learning",
+          "data science",
+          "artificial intelligence",
+          "big data",
+          "predictive analytics"
+        ],
+        "predicted_subfields": [
+          "computational statistics",
+          "data mining",
+          "algorithm development",
+          "statistical modeling"
+        ],
+        "predicted_modalities": [
+          "quantitative analysis",
+          "simulation studies",
+          "software development",
+          "data visualization"
+        ]
+      }
+    }
+  },
+  {
+    "prediction": {
+      "professor": "Marzyeh Ghassemi",
+      "affiliation": "Massachusetts Institute of Technology (MIT)",
+      "predicted_keywords": [
+        "machine learning",
+        "healthcare",
+        "predictive analytics",
+        "personalized medicine",
+        "data privacy",
+        "algorithmic fairness"
+      ],
+      "predicted_subfields": [
+        "health informatics",
+        "artificial intelligence in medicine",
+        "biostatistics",
+        "computational biology"
+      ],
+      "predicted_modalities": [
+        "quantitative analysis",
+        "statistical modeling",
+        "deep learning",
+        "natural language processing"
+      ]
+    },
+    "verification": null,
+    "error": "no 2025 papers found"
+  },
+  {
+    "prediction": {
+      "professor": "Anjalie Field",
+      "affiliation": "",
+      "predicted_keywords": [
+        "sustainable agriculture",
+        "climate change adaptation",
+        "agroecology",
+        "food security",
+        "biodiversity conservation"
+      ],
+      "predicted_subfields": [
+        "environmental science",
+        "agricultural science",
+        "sustainability studies",
+        "ecology"
+      ],
+      "predicted_modalities": [
+        "field experiments",
+        "data modeling",
+        "remote sensing",
+        "community engagement"
+      ]
+    },
+    "verification": {
+      "keyword_precision": 0.0,
+      "keyword_recall": 0.0,
+      "subfield_precision": 0.0,
+      "subfield_recall": 0.0,
+      "modality_precision": 0.0,
+      "modality_recall": 0.0,
+      "overall_score": 0.0,
+      "matches": {
+        "keyword_matches": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "subfield_matches": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "modality_matches": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "n_actual_items": 4,
+      "author_prediction": {
+        "professor": "Anjalie Field",
+        "affiliation": "",
+        "predicted_keywords": [
+          "sustainable agriculture",
+          "climate change adaptation",
+          "agroecology",
+          "food security",
+          "biodiversity conservation"
+        ],
+        "predicted_subfields": [
+          "environmental science",
+          "agricultural science",
+          "sustainability studies",
+          "ecology"
+        ],
+        "predicted_modalities": [
+          "field experiments",
+          "data modeling",
+          "remote sensing",
+          "community engagement"
+        ]
+      }
+    }
+  },
+  {
+    "prediction": {
+      "professor": "Yoon Kim",
+      "affiliation": "Harvard University",
+      "predicted_keywords": [
+        "natural language processing",
+        "machine learning",
+        "transformer models",
+        "multimodal AI",
+        "ethical AI"
+      ],
+      "predicted_subfields": [
+        "computational linguistics",
+        "deep learning",
+        "AI ethics",
+        "human-computer interaction"
+      ],
+      "predicted_modalities": [
+        "text",
+        "audio",
+        "visual",
+        "multimodal data"
+      ]
+    },
+    "verification": null,
+    "error": "no 2025 papers found"
+  },
+  {
+    "prediction": {
+      "professor": "Pang Wei Koh",
+      "affiliation": "National University of Singapore",
+      "predicted_keywords": [
+        "machine learning",
+        "data science",
+        "algorithmic fairness",
+        "AI ethics",
+        "predictive analytics"
+      ],
+      "predicted_subfields": [
+        "artificial intelligence",
+        "data mining",
+        "computational social science",
+        "human-computer interaction"
+      ],
+      "predicted_modalities": [
+        "quantitative analysis",
+        "computational modeling",
+        "interdisciplinary research",
+        "case studies"
+      ]
+    },
+    "verification": null,
+    "error": "no 2025 papers found"
+  },
+  {
+    "prediction": {
+      "professor": "Raphaël Millière",
+      "affiliation": "University of Cambridge",
+      "predicted_keywords": [
+        "consciousness",
+        "philosophy of mind",
+        "artificial intelligence",
+        "neuroscience",
+        "cognitive science"
+      ],
+      "predicted_subfields": [
+        "philosophy of cognitive science",
+        "neurophilosophy",
+        "philosophy of artificial intelligence"
+      ],
+      "predicted_modalities": [
+        "theoretical analysis",
+        "empirical research",
+        "interdisciplinary collaboration"
+      ]
+    },
+    "verification": {
+      "keyword_precision": 0.2,
+      "keyword_recall": 0.111,
+      "subfield_precision": 0.333,
+      "subfield_recall": 0.2,
+      "modality_precision": 0.667,
+      "modality_recall": 0.667,
+      "overall_score": 0.353,
+      "matches": {
+        "keyword_matches": [
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "subfield_matches": [
+          0,
+          0,
+          1
+        ],
+        "modality_matches": [
+          1,
+          1,
+          0
+        ]
+      },
+      "n_actual_items": 1,
+      "author_prediction": {
+        "professor": "Raphaël Millière",
+        "affiliation": "University of Cambridge",
+        "predicted_keywords": [
+          "consciousness",
+          "philosophy of mind",
+          "artificial intelligence",
+          "neuroscience",
+          "cognitive science"
+        ],
+        "predicted_subfields": [
+          "philosophy of cognitive science",
+          "neurophilosophy",
+          "philosophy of artificial intelligence"
+        ],
+        "predicted_modalities": [
+          "theoretical analysis",
+          "empirical research",
+          "interdisciplinary collaboration"
+        ]
+      }
+    }
+  },
+  {
+    "prediction": {
+      "professor": "Antonio Orvieto",
+      "affiliation": "Universidade de São Paulo",
+      "predicted_keywords": [
+        "reproductive health",
+        "fertility preservation",
+        "assisted reproductive technology",
+        "genetic screening",
+        "endocrinology"
+      ],
+      "predicted_subfields": [
+        "reproductive endocrinology",
+        "gynecology",
+        "embryology",
+        "genetics",
+        "public health"
+      ],
+      "predicted_modalities": [
+        "clinical trials",
+        "longitudinal studies",
+        "meta-analysis",
+        "biostatistics",
+        "patient-centered research"
+      ]
+    },
+    "verification": {
+      "keyword_precision": 0.0,
+      "keyword_recall": 0.0,
+      "subfield_precision": 0.0,
+      "subfield_recall": 0.0,
+      "modality_precision": 0.0,
+      "modality_recall": 0.0,
+      "overall_score": 0.0,
+      "matches": {
+        "keyword_matches": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "subfield_matches": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "modality_matches": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "n_actual_items": 5,
+      "author_prediction": {
+        "professor": "Antonio Orvieto",
+        "affiliation": "Universidade de São Paulo",
+        "predicted_keywords": [
+          "reproductive health",
+          "fertility preservation",
+          "assisted reproductive technology",
+          "genetic screening",
+          "endocrinology"
+        ],
+        "predicted_subfields": [
+          "reproductive endocrinology",
+          "gynecology",
+          "embryology",
+          "genetics",
+          "public health"
+        ],
+        "predicted_modalities": [
+          "clinical trials",
+          "longitudinal studies",
+          "meta-analysis",
+          "biostatistics",
+          "patient-centered research"
+        ]
+      }
+    }
+  },
+  {
+    "prediction": {
+      "professor": "Parthe Pandit",
+      "affiliation": "",
+      "predicted_keywords": [
+        "machine learning",
+        "data privacy",
+        "algorithmic fairness",
+        "AI ethics",
+        "big data analytics"
+      ],
+      "predicted_subfields": [
+        "artificial intelligence",
+        "data science",
+        "computational ethics",
+        "human-computer interaction"
+      ],
+      "predicted_modalities": [
+        "quantitative analysis",
+        "qualitative research",
+        "interdisciplinary collaboration"
+      ]
+    },
+    "verification": {
+      "keyword_precision": 0.0,
+      "keyword_recall": 0.0,
+      "subfield_precision": 0.25,
+      "subfield_recall": 0.111,
+      "modality_precision": 0.0,
+      "modality_recall": 0.0,
+      "overall_score": 0.051,
+      "matches": {
+        "keyword_matches": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "subfield_matches": [
+          1,
+          0,
+          0,
+          0
+        ],
+        "modality_matches": [
+          0,
+          0,
+          0
+        ]
+      },
+      "n_actual_items": 4,
+      "author_prediction": {
+        "professor": "Parthe Pandit",
+        "affiliation": "",
+        "predicted_keywords": [
+          "machine learning",
+          "data privacy",
+          "algorithmic fairness",
+          "AI ethics",
+          "big data analytics"
+        ],
+        "predicted_subfields": [
+          "artificial intelligence",
+          "data science",
+          "computational ethics",
+          "human-computer interaction"
+        ],
+        "predicted_modalities": [
+          "quantitative analysis",
+          "qualitative research",
+          "interdisciplinary collaboration"
+        ]
+      }
+    }
+  },
+  {
+    "prediction": {
+      "professor": "Aviral Kumar",
+      "affiliation": "University of California, Berkeley",
+      "predicted_keywords": [
+        "machine learning",
+        "data privacy",
+        "algorithmic fairness",
+        "AI ethics",
+        "big data"
+      ],
+      "predicted_subfields": [
+        "artificial intelligence",
+        "data science",
+        "computational social science"
+      ],
+      "predicted_modalities": [
+        "quantitative analysis",
+        "theoretical modeling",
+        "empirical research"
+      ]
+    },
+    "verification": {
+      "keyword_precision": 0.0,
+      "keyword_recall": 0.0,
+      "subfield_precision": 0.0,
+      "subfield_recall": 0.0,
+      "modality_precision": 0.0,
+      "modality_recall": 0.0,
+      "overall_score": 0.0,
+      "matches": {
+        "keyword_matches": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "subfield_matches": [
+          0,
+          0,
+          0
+        ],
+        "modality_matches": [
+          0,
+          0,
+          0
+        ]
+      },
+      "n_actual_items": 35,
+      "author_prediction": {
+        "professor": "Aviral Kumar",
+        "affiliation": "University of California, Berkeley",
+        "predicted_keywords": [
+          "machine learning",
+          "data privacy",
+          "algorithmic fairness",
+          "AI ethics",
+          "big data"
+        ],
+        "predicted_subfields": [
+          "artificial intelligence",
+          "data science",
+          "computational social science"
+        ],
+        "predicted_modalities": [
+          "quantitative analysis",
+          "theoretical modeling",
+          "empirical research"
+        ]
+      }
+    }
+  },
+  {
+    "prediction": {
+      "professor": "Yuanyuan Shi",
+      "affiliation": "University of Illinois at Urbana-Champaign",
+      "predicted_keywords": [
+        "machine learning",
+        "data privacy",
+        "algorithm optimization",
+        "distributed systems",
+        "edge computing"
+      ],
+      "predicted_subfields": [
+        "computer science",
+        "artificial intelligence",
+        "cybersecurity",
+        "cloud computing"
+      ],
+      "predicted_modalities": [
+        "theoretical research",
+        "applied research",
+        "experimental studies",
+        "interdisciplinary collaborations"
+      ]
+    },
+    "verification": null,
+    "error": "no 2025 papers found"
+  },
+  {
+    "prediction": {
+      "professor": "David Rolnick",
+      "affiliation": "McGill University",
+      "predicted_keywords": [
+        "machine learning",
+        "climate change",
+        "sustainability",
+        "data-driven modeling",
+        "AI for social good"
+      ],
+      "predicted_subfields": [
+        "artificial intelligence",
+        "environmental science",
+        "computational social science",
+        "data science"
+      ],
+      "predicted_modalities": [
+        "interdisciplinary research",
+        "collaborative projects",
+        "applied research",
+        "theoretical frameworks"
+      ]
+    },
+    "verification": {
+      "keyword_precision": 0.0,
+      "keyword_recall": 0.0,
+      "subfield_precision": 0.75,
+      "subfield_recall": 0.167,
+      "modality_precision": 0.0,
+      "modality_recall": 0.0,
+      "overall_score": 0.091,
+      "matches": {
+        "keyword_matches": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "subfield_matches": [
+          1,
+          1,
+          0,
+          1
+        ],
+        "modality_matches": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "n_actual_items": 8,
+      "author_prediction": {
+        "professor": "David Rolnick",
+        "affiliation": "McGill University",
+        "predicted_keywords": [
+          "machine learning",
+          "climate change",
+          "sustainability",
+          "data-driven modeling",
+          "AI for social good"
+        ],
+        "predicted_subfields": [
+          "artificial intelligence",
+          "environmental science",
+          "computational social science",
+          "data science"
+        ],
+        "predicted_modalities": [
+          "interdisciplinary research",
+          "collaborative projects",
+          "applied research",
+          "theoretical frameworks"
+        ]
+      }
+    }
+  },
+  {
+    "prediction": {
+      "professor": "Florian Shkurti",
+      "affiliation": "University of California, Berkeley",
+      "predicted_keywords": [
+        "machine learning",
+        "artificial intelligence",
+        "neuroscience",
+        "cognitive computing",
+        "data-driven models"
+      ],
+      "predicted_subfields": [
+        "computational neuroscience",
+        "AI ethics",
+        "human-computer interaction",
+        "neural networks",
+        "bioinformatics"
+      ],
+      "predicted_modalities": [
+        "quantitative analysis",
+        "simulation modeling",
+        "experimental research",
+        "interdisciplinary collaboration",
+        "data visualization"
+      ]
+    },
+    "verification": {
+      "keyword_precision": 0.4,
+      "keyword_recall": 0.222,
+      "subfield_precision": 0.2,
+      "subfield_recall": 0.2,
+      "modality_precision": 0.2,
+      "modality_recall": 0.25,
+      "overall_score": 0.236,
+      "matches": {
+        "keyword_matches": [
+          0,
+          1,
+          0,
+          0,
+          1
+        ],
+        "subfield_matches": [
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "modality_matches": [
+          0,
+          0,
+          0,
+          1,
+          0
+        ]
+      },
+      "n_actual_items": 1,
+      "author_prediction": {
+        "professor": "Florian Shkurti",
+        "affiliation": "University of California, Berkeley",
+        "predicted_keywords": [
+          "machine learning",
+          "artificial intelligence",
+          "neuroscience",
+          "cognitive computing",
+          "data-driven models"
+        ],
+        "predicted_subfields": [
+          "computational neuroscience",
+          "AI ethics",
+          "human-computer interaction",
+          "neural networks",
+          "bioinformatics"
+        ],
+        "predicted_modalities": [
+          "quantitative analysis",
+          "simulation modeling",
+          "experimental research",
+          "interdisciplinary collaboration",
+          "data visualization"
+        ]
+      }
+    }
+  },
+  {
+    "prediction": {
+      "professor": "Bijun Tang",
+      "affiliation": "",
+      "predicted_keywords": [
+        "machine learning",
+        "data science",
+        "artificial intelligence",
+        "big data",
+        "predictive analytics"
+      ],
+      "predicted_subfields": [
+        "computational statistics",
+        "data mining",
+        "algorithm development",
+        "statistical modeling"
+      ],
+      "predicted_modalities": [
+        "quantitative analysis",
+        "simulation studies",
+        "empirical research",
+        "theoretical frameworks"
+      ]
+    },
+    "verification": {
+      "keyword_precision": 0.4,
+      "keyword_recall": 0.4,
+      "subfield_precision": 0.25,
+      "subfield_recall": 0.25,
+      "modality_precision": 0.25,
+      "modality_recall": 0.333,
+      "overall_score": 0.312,
+      "matches": {
+        "keyword_matches": [
+          1,
+          0,
+          1,
+          0,
+          0
+        ],
+        "subfield_matches": [
+          0,
+          0,
+          1,
+          0
+        ],
+        "modality_matches": [
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "n_actual_items": 1,
+      "author_prediction": {
+        "professor": "Bijun Tang",
+        "affiliation": "",
+        "predicted_keywords": [
+          "machine learning",
+          "data science",
+          "artificial intelligence",
+          "big data",
+          "predictive analytics"
+        ],
+        "predicted_subfields": [
+          "computational statistics",
+          "data mining",
+          "algorithm development",
+          "statistical modeling"
+        ],
+        "predicted_modalities": [
+          "quantitative analysis",
+          "simulation studies",
+          "empirical research",
+          "theoretical frameworks"
+        ]
+      }
+    }
+  },
+  {
+    "prediction": {
+      "professor": "Eric Wong",
+      "affiliation": "University of California, Berkeley",
+      "predicted_keywords": [
+        "machine learning",
+        "data privacy",
+        "algorithmic fairness",
+        "AI ethics",
+        "big data analytics"
+      ],
+      "predicted_subfields": [
+        "computer science",
+        "data science",
+        "artificial intelligence",
+        "information systems"
+      ],
+      "predicted_modalities": [
+        "quantitative analysis",
+        "computational modeling",
+        "empirical research",
+        "theoretical frameworks"
+      ]
+    },
+    "verification": null,
+    "error": "no 2025 papers found"
+  },
+  {
+    "prediction": {
+      "professor": "Ellen Vitercik",
+      "affiliation": "",
+      "predicted_keywords": [
+        "sustainable agriculture",
+        "climate change adaptation",
+        "agroecology",
+        "food security",
+        "biodiversity conservation"
+      ],
+      "predicted_subfields": [
+        "environmental science",
+        "agricultural science",
+        "sustainability studies",
+        "ecology"
+      ],
+      "predicted_modalities": [
+        "field experiments",
+        "data modeling",
+        "remote sensing",
+        "community engagement"
+      ]
+    },
+    "verification": {
+      "keyword_precision": 0.0,
+      "keyword_recall": 0.0,
+      "subfield_precision": 0.0,
+      "subfield_recall": 0.0,
+      "modality_precision": 0.0,
+      "modality_recall": 0.0,
+      "overall_score": 0.0,
+      "matches": {
+        "keyword_matches": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "subfield_matches": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "modality_matches": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "n_actual_items": 3,
+      "author_prediction": {
+        "professor": "Ellen Vitercik",
+        "affiliation": "",
+        "predicted_keywords": [
+          "sustainable agriculture",
+          "climate change adaptation",
+          "agroecology",
+          "food security",
+          "biodiversity conservation"
+        ],
+        "predicted_subfields": [
+          "environmental science",
+          "agricultural science",
+          "sustainability studies",
+          "ecology"
+        ],
+        "predicted_modalities": [
+          "field experiments",
+          "data modeling",
+          "remote sensing",
+          "community engagement"
+        ]
+      }
+    }
+  },
+  {
+    "prediction": {
+      "professor": "Chaowei Xiao",
+      "affiliation": "University of California, Merced",
+      "predicted_keywords": [
+        "machine learning",
+        "data science",
+        "environmental modeling",
+        "geospatial analysis",
+        "big data"
+      ],
+      "predicted_subfields": [
+        "computational geography",
+        "climate informatics",
+        "urban analytics",
+        "remote sensing",
+        "spatial data science"
+      ],
+      "predicted_modalities": [
+        "quantitative analysis",
+        "statistical modeling",
+        "visualization techniques",
+        "simulation modeling",
+        "interdisciplinary collaboration"
+      ]
+    },
+    "verification": null,
+    "error": "no 2025 papers found"
+  },
+  {
+    "prediction": {
+      "professor": "Anima Anandkumar",
+      "affiliation": "California Institute of Technology",
+      "predicted_keywords": [
+        "machine learning",
+        "tensor decomposition",
+        "AI ethics",
+        "neural networks",
+        "explainable AI"
+      ],
+      "predicted_subfields": [
+        "artificial intelligence",
+        "machine learning",
+        "data science",
+        "computational neuroscience"
+      ],
+      "predicted_modalities": [
+        "theoretical research",
+        "algorithm development",
+        "empirical studies",
+        "interdisciplinary collaborations"
+      ]
+    },
+    "verification": null,
+    "error": "no 2025 papers found"
+  },
+  {
+    "prediction": {
+      "professor": "Stephanie Dinkins",
+      "affiliation": "Stony Brook University",
+      "predicted_keywords": [
+        "artificial intelligence",
+        "racial equity",
+        "social justice",
+        "machine learning",
+        "digital identity",
+        "community engagement"
+      ],
+      "predicted_subfields": [
+        "AI ethics",
+        "human-computer interaction",
+        "digital humanities",
+        "sociotechnical systems"
+      ],
+      "predicted_modalities": [
+        "interactive installations",
+        "multimedia storytelling",
+        "community-based research",
+        "workshops and public dialogues"
+      ]
+    },
+    "verification": null,
+    "error": "no 2025 papers found"
+  },
+  {
+    "prediction": {
+      "professor": "Gillian Hadfield",
+      "affiliation": "University of Southern California",
+      "predicted_keywords": [
+        "legal technology",
+        "access to justice",
+        "AI in law",
+        "regulatory frameworks",
+        "innovation in legal services"
+      ],
+      "predicted_subfields": [
+        "law and technology",
+        "legal informatics",
+        "public policy",
+        "economics of law",
+        "dispute resolution"
+      ],
+      "predicted_modalities": [
+        "interdisciplinary research",
+        "empirical studies",
+        "case law analysis",
+        "policy analysis",
+        "workshops and seminars"
+      ]
+    },
+    "verification": {
+      "keyword_precision": 0.0,
+      "keyword_recall": 0.0,
+      "subfield_precision": 0.0,
+      "subfield_recall": 0.0,
+      "modality_precision": 0.0,
+      "modality_recall": 0.0,
+      "overall_score": 0.0,
+      "matches": {
+        "keyword_matches": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "subfield_matches": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "modality_matches": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "n_actual_items": 2,
+      "author_prediction": {
+        "professor": "Gillian Hadfield",
+        "affiliation": "University of Southern California",
+        "predicted_keywords": [
+          "legal technology",
+          "access to justice",
+          "AI in law",
+          "regulatory frameworks",
+          "innovation in legal services"
+        ],
+        "predicted_subfields": [
+          "law and technology",
+          "legal informatics",
+          "public policy",
+          "economics of law",
+          "dispute resolution"
+        ],
+        "predicted_modalities": [
+          "interdisciplinary research",
+          "empirical studies",
+          "case law analysis",
+          "policy analysis",
+          "workshops and seminars"
+        ]
+      }
+    }
+  },
+  {
+    "prediction": {
+      "professor": "Fei-Fei Li",
+      "affiliation": "Stanford University",
+      "predicted_keywords": [
+        "artificial intelligence",
+        "computer vision",
+        "machine learning",
+        "human-centered AI",
+        "neurosymbolic AI"
+      ],
+      "predicted_subfields": [
+        "deep learning",
+        "cognitive computing",
+        "AI ethics",
+        "robotics",
+        "data science"
+      ],
+      "predicted_modalities": [
+        "visual data",
+        "multimodal learning",
+        "natural language processing",
+        "interactive AI systems"
+      ]
+    },
+    "verification": null,
+    "error": "no 2025 papers found"
+  },
+  {
+    "prediction": {
+      "professor": "Tobias Rees",
+      "affiliation": "University of Toronto",
+      "predicted_keywords": [
+        "neuroethics",
+        "artificial intelligence",
+        "cognitive enhancement",
+        "biotechnology",
+        "human-machine interaction"
+      ],
+      "predicted_subfields": [
+        "bioethics",
+        "neuroscience",
+        "philosophy of technology",
+        "cognitive science",
+        "social implications of AI"
+      ],
+      "predicted_modalities": [
+        "interdisciplinary research",
+        "qualitative analysis",
+        "empirical studies",
+        "public engagement",
+        "policy development"
+      ]
+    },
+    "verification": null,
+    "error": "no 2025 papers found"
+  },
+  {
+    "prediction": {
+      "professor": "Kelly Chibale",
+      "affiliation": "University of Cape Town",
+      "predicted_keywords": [
+        "drug discovery",
+        "antimicrobial resistance",
+        "tropical diseases",
+        "medicinal chemistry",
+        "biotechnology"
+      ],
+      "predicted_subfields": [
+        "pharmaceutical sciences",
+        "chemoinformatics",
+        "natural product chemistry",
+        "biomedical research"
+      ],
+      "predicted_modalities": [
+        "in vitro studies",
+        "computational modeling",
+        "clinical trials",
+        "collaborative research"
+      ]
+    },
+    "verification": {
+      "keyword_precision": 0.4,
+      "keyword_recall": 0.021,
+      "subfield_precision": 0.5,
+      "subfield_recall": 0.08,
+      "modality_precision": 0.75,
+      "modality_recall": 0.091,
+      "overall_score": 0.113,
+      "matches": {
+        "keyword_matches": [
+          0,
+          1,
+          0,
+          1,
+          0
+        ],
+        "subfield_matches": [
+          1,
+          0,
+          0,
+          1
+        ],
+        "modality_matches": [
+          1,
+          0,
+          1,
+          1
+        ]
+      },
+      "n_actual_items": 13,
+      "author_prediction": {
+        "professor": "Kelly Chibale",
+        "affiliation": "University of Cape Town",
+        "predicted_keywords": [
+          "drug discovery",
+          "antimicrobial resistance",
+          "tropical diseases",
+          "medicinal chemistry",
+          "biotechnology"
+        ],
+        "predicted_subfields": [
+          "pharmaceutical sciences",
+          "chemoinformatics",
+          "natural product chemistry",
+          "biomedical research"
+        ],
+        "predicted_modalities": [
+          "in vitro studies",
+          "computational modeling",
+          "clinical trials",
+          "collaborative research"
+        ]
+      }
+    }
+  },
+  {
+    "prediction": {
+      "professor": "Josh Tenenbaum",
+      "affiliation": "Massachusetts Institute of Technology (MIT)",
+      "predicted_keywords": [
+        "machine learning",
+        "cognitive science",
+        "artificial intelligence",
+        "neurosymbolic AI",
+        "human-like reasoning"
+      ],
+      "predicted_subfields": [
+        "computational neuroscience",
+        "machine learning",
+        "cognitive modeling",
+        "AI ethics",
+        "human-computer interaction"
+      ],
+      "predicted_modalities": [
+        "visual recognition",
+        "natural language processing",
+        "robotics",
+        "interactive systems",
+        "multimodal learning"
+      ]
+    },
+    "verification": {
+      "keyword_precision": 0.0,
+      "keyword_recall": 0.0,
+      "subfield_precision": 0.2,
+      "subfield_recall": 0.2,
+      "modality_precision": 0.2,
+      "modality_recall": 0.333,
+      "overall_score": 0.15,
+      "matches": {
+        "keyword_matches": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "subfield_matches": [
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "modality_matches": [
+          1,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "n_actual_items": 1,
+      "author_prediction": {
+        "professor": "Josh Tenenbaum",
+        "affiliation": "Massachusetts Institute of Technology (MIT)",
+        "predicted_keywords": [
+          "machine learning",
+          "cognitive science",
+          "artificial intelligence",
+          "neurosymbolic AI",
+          "human-like reasoning"
+        ],
+        "predicted_subfields": [
+          "computational neuroscience",
+          "machine learning",
+          "cognitive modeling",
+          "AI ethics",
+          "human-computer interaction"
+        ],
+        "predicted_modalities": [
+          "visual recognition",
+          "natural language processing",
+          "robotics",
+          "interactive systems",
+          "multimodal learning"
+        ]
+      }
+    }
+  },
+  {
+    "prediction": {
+      "professor": "Amanda Coston",
+      "affiliation": "University of California, Berkeley",
+      "predicted_keywords": [
+        "sustainable energy",
+        "renewable resources",
+        "climate change",
+        "energy storage",
+        "smart grids"
+      ],
+      "predicted_subfields": [
+        "environmental science",
+        "energy policy",
+        "renewable energy technology",
+        "sustainability studies"
+      ],
+      "predicted_modalities": [
+        "quantitative analysis",
+        "modeling and simulation",
+        "field studies",
+        "policy analysis"
+      ]
+    },
+    "verification": {
+      "keyword_precision": 0.0,
+      "keyword_recall": 0.0,
+      "subfield_precision": 0.25,
+      "subfield_recall": 0.2,
+      "modality_precision": 0.25,
+      "modality_recall": 0.333,
+      "overall_score": 0.169,
+      "matches": {
+        "keyword_matches": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "subfield_matches": [
+          0,
+          0,
+          1,
+          0
+        ],
+        "modality_matches": [
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "n_actual_items": 1,
+      "author_prediction": {
+        "professor": "Amanda Coston",
+        "affiliation": "University of California, Berkeley",
+        "predicted_keywords": [
+          "sustainable energy",
+          "renewable resources",
+          "climate change",
+          "energy storage",
+          "smart grids"
+        ],
+        "predicted_subfields": [
+          "environmental science",
+          "energy policy",
+          "renewable energy technology",
+          "sustainability studies"
+        ],
+        "predicted_modalities": [
+          "quantitative analysis",
+          "modeling and simulation",
+          "field studies",
+          "policy analysis"
+        ]
+      }
+    }
+  }
+]
