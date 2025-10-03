@@ -37,7 +37,14 @@ def rate_limit():
 
 # -------------------- Forecast Schema --------------------
 SYSTEM_PROMPT = """You are an expert research analyst.
-Given a professor’s name and affiliation, forecast their most likely research direction in 2025.
+Given a professor’s name and affiliation (optional), forecast their most likely research direction in 2025.
+Output STRICT JSON matching the schema.
+
+Rules:
+- predicted_keywords: 3–10 concise future-oriented keywords.
+- predicted_subfields: map to broad AI/ML subfields (e.g., "causal inference", "retrieval augmentation", "fairness").
+- predicted_modalities: choose from {"text", "vision", "speech", "multimodal"}.
+- Be conservative; do not speculate beyond known research identity.
 """
 
 JSON_SCHEMA = {
@@ -133,12 +140,20 @@ async def extract_paper_metadata(paper: Dict[str, Any]) -> Dict[str, Any]:
     abstract = paper.get("abstract", "No abstract available")
     venue = paper.get("venue", "Unknown venue")
 
-    extraction_prompt = f"""Extract structured metadata from this 2025 research paper.
+    extraction_prompt = f"""
+Given a research paper's title, abstract, and venue:
+Extract structured metadata from this 2025 research paper.
 
 PAPER:
 - Title: {title}
 - Abstract: {abstract}
 - Venue: {venue}
+
+Rules:
+- predicted_keywords: 3–10 concise future-oriented keywords.
+- predicted_subfields: map to broad AI/ML subfields (e.g., "causal inference", "retrieval augmentation", "fairness").
+- predicted_modalities: choose from {"text", "vision", "speech", "multimodal"}.
+- Be conservative; do not speculate beyond known research identity.
 
 Return JSON with arrays for actual_keywords, actual_subfields, actual_modalities.
 """
@@ -160,7 +175,7 @@ Return JSON with arrays for actual_keywords, actual_subfields, actual_modalities
         resp = await acompletion(
             model=MODEL,
             messages=[
-                {"role": "system", "content": "You are an expert extracting metadata."},
+                {"role": "system", "content": "You are an expert research analyst."},
                 {"role": "user", "content": extraction_prompt}
             ],
             temperature=0,
@@ -248,9 +263,11 @@ Return strict JSON with arrays matching forecast order.
         "modality_precision": round(md_p, 3),
         "modality_recall": round(md_r, 3),
         "overall_score": round((kw_f1 + sf_f1 + md_f1)/3, 3),
+        "actual_keywords": list(actual_keywords),
+        "actual_subfields": list(actual_subfields),
+        "actual_modalities": list(actual_modalities),
         "matches": matches,
-        "n_actual_items": len(paper_metas),
-        "author_prediction": pred
+        "n_papers": len(paper_metas),
     }
 
 # -------------------- Verification --------------------
