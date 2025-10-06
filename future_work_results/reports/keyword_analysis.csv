@@ -1,0 +1,86 @@
+keyword,count,type
+bias and fairness,66,predicted
+human-AI interaction,59,predicted
+values and ethics,32,predicted
+interpretability,29,predicted
+machine learning,25,predicted
+deep learning,16,predicted
+transparency and accountability,13,predicted
+AI safety,13,predicted
+adversarial robustness,12,predicted
+transfer learning,12,predicted
+data efficiency,11,predicted
+social and cultural analytics,7,predicted
+reinforcement learning,7,predicted
+generative models,5,predicted
+clinical NLP,4,predicted
+text generation,4,predicted
+domain adaptation,4,predicted
+causal inference,4,predicted
+optimization methods,4,predicted
+active learning,3,predicted
+multimodality,3,predicted
+robustness,3,predicted
+few-shot learning,2,predicted
+neural networks,2,predicted
+vision-language modeling,2,predicted
+commonsense reasoning,2,predicted
+cross-lingual transfer,2,predicted
+probabilistic modeling,2,predicted
+language modeling,1,predicted
+multi-task learning,1,predicted
+evaluation metrics,1,predicted
+meta learning,1,predicted
+graph neural networks,1,predicted
+representation learning,1,predicted
+information retrieval,1,predicted
+question answering,1,predicted
+machine translation,1,predicted
+bias and fairness,12,actual
+optimization methods,9,actual
+reasoning,8,actual
+generative models,8,actual
+human-AI interaction,8,actual
+robustness,7,actual
+evaluation metrics,6,actual
+reinforcement learning,6,actual
+values and ethics,6,actual
+data efficiency,5,actual
+representation learning,5,actual
+interpretability,5,actual
+causal inference,4,actual
+social and cultural analytics,4,actual
+multimodality,4,actual
+fine-tuning,4,actual
+transparency and accountability,4,actual
+adversarial robustness,4,actual
+clinical NLP,3,actual
+language modeling,3,actual
+machine learning,2,actual
+contrastive learning,2,actual
+graph neural networks,2,actual
+active learning,2,actual
+machine translation,2,actual
+pre-training,2,actual
+variational inference,1,actual
+privacy protection,1,actual
+text generation,1,actual
+topic modeling,1,actual
+sentiment analysis,1,actual
+domain adaptation,1,actual
+data analysis,1,actual
+insect monitoring,1,actual
+image-based AI,1,actual
+meta learning,1,actual
+conservation,1,actual
+biodiversity monitoring,1,actual
+transfer learning,1,actual
+question answering,1,actual
+multilingual and cross-lingual NLP,1,actual
+data augmentation,1,actual
+information retrieval,1,actual
+semantic similarity,1,actual
+retrieval-augmented generation,1,actual
+probabilistic modeling,1,actual
+fact checking,1,actual
+misinformation detection,1,actual
