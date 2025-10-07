@@ -85,6 +85,15 @@ FINE_TOPIC_MIN = 5
 FINE_TOPIC_MAX = 60
 FINE_TOPIC_DEFAULT = 30
 
+PRIMARY_TOPIC_MIN = 5
+PRIMARY_TOPIC_MAX = 25
+PRIMARY_TOPIC_DEFAULT = 12
+OTHER_TOPIC_LABEL = "Other topics"
+OTHER_TOPIC_PREFIX = "Other - "
+OTHER_TOPIC_BUCKETS_MIN = 1
+OTHER_TOPIC_BUCKETS_MAX = 5
+OTHER_TOPIC_BUCKETS_DEFAULT = 3
+
 
 @dataclass(frozen=True)
 class TrendSummary:
@@ -250,6 +259,47 @@ def _split_authors(text: str | float | None) -> list[str]:
     return _deduplicate_preserve_order(tokens)
 
 
+def _primary_topic_prefix(topic: str) -> str:
+    """Heuristic grouping key for related primary topics."""
+
+    cleaned = topic.strip()
+    if not cleaned or cleaned in {"Unknown", OTHER_TOPIC_LABEL}:
+        return "Misc"
+    if cleaned.startswith(OTHER_TOPIC_PREFIX):
+        # Already grouped.
+        return cleaned.replace(OTHER_TOPIC_PREFIX, "", 1).strip() or "Misc"
+    lowered = cleaned.lower()
+    if lowered.startswith("other:"):
+        remainder = cleaned.split(":", 1)[1].strip()
+        if remainder:
+            cleaned = remainder
+        else:
+            return "Misc"
+    for separator in ("/", ":"):
+        if separator in cleaned:
+            candidate = cleaned.split(separator, 1)[0].strip()
+            if candidate:
+                return candidate
+    tokens = cleaned.split()
+    if not tokens:
+        return "Misc"
+    if len(tokens) == 1:
+        return tokens[0]
+    return " ".join(tokens[:2])
+
+
+def _format_other_label(prefix: str) -> str:
+    """Normalise grouped 'other' bucket labels to avoid tautologies."""
+
+    cleaned = prefix.strip()
+    if not cleaned:
+        return OTHER_TOPIC_LABEL
+    lowered = cleaned.lower()
+    if lowered in {"other", "misc", "miscellaneous", "unknown"}:
+        return OTHER_TOPIC_LABEL
+    return f"{OTHER_TOPIC_PREFIX}{cleaned}"
+
+
 def _top_list_counts(
     df: pd.DataFrame,
     column: str,
@@ -296,12 +346,72 @@ def _explode_counts(df: pd.DataFrame, column: str, top_n: int | None = None) -> 
     return counts
 
 
-def build_primary_topic_trends(df: pd.DataFrame) -> pd.DataFrame:
+def build_primary_topic_trends(
+    df: pd.DataFrame,
+    limit: int | None = None,
+    other_buckets: int = OTHER_TOPIC_BUCKETS_DEFAULT,
+) -> pd.DataFrame:
+    if df.empty:
+        return pd.DataFrame(
+            columns=["year", "primary_topic", "paper_count", "year_total", "share"]
+        )
+
     yearly_totals = df.groupby("year").size().rename("year_total").reset_index()
     primary_counts = (
         df.groupby(["year", "primary_topic"]).size().rename("paper_count").reset_index()
-        .merge(yearly_totals, on="year", how="left")
     )
+
+    if limit:
+        limit = max(PRIMARY_TOPIC_MIN, min(int(limit), PRIMARY_TOPIC_MAX))
+        other_buckets = max(
+            OTHER_TOPIC_BUCKETS_MIN, min(int(other_buckets), OTHER_TOPIC_BUCKETS_MAX)
+        )
+        totals = (
+            primary_counts.groupby("primary_topic")["paper_count"]
+            .sum()
+            .sort_values(ascending=False)
+        )
+        top_topics = set(totals.head(limit).index)
+        remainder_mask = ~primary_counts["primary_topic"].isin(top_topics)
+        if remainder_mask.any():
+            remainder_totals = (
+                primary_counts.loc[remainder_mask]
+                .groupby("primary_topic")["paper_count"]
+                .sum()
+                .sort_values(ascending=False)
+            )
+            mapping: dict[str, str] = {}
+            if other_buckets <= 1:
+                mapping = {topic: OTHER_TOPIC_LABEL for topic in remainder_totals.index}
+            else:
+                prefix_totals = (
+                    remainder_totals.reset_index()
+                    .assign(prefix=lambda df_: df_["primary_topic"].apply(_primary_topic_prefix))
+                    .groupby("prefix")["paper_count"]
+                    .sum()
+                    .sort_values(ascending=False)
+                )
+                selected_prefixes = list(prefix_totals.head(other_buckets - 1).index)
+                prefix_to_label: dict[str, str] = {}
+                for prefix in selected_prefixes:
+                    label = _format_other_label(prefix)
+                    if label != OTHER_TOPIC_LABEL:
+                        prefix_to_label[prefix] = label
+                topic_prefix = {
+                    topic: _primary_topic_prefix(topic) for topic in remainder_totals.index
+                }
+                for topic, prefix in topic_prefix.items():
+                    label = prefix_to_label.get(prefix)
+                    mapping[topic] = label if label else OTHER_TOPIC_LABEL
+            primary_counts.loc[remainder_mask, "primary_topic"] = primary_counts.loc[
+                remainder_mask, "primary_topic"
+            ].map(mapping)
+        primary_counts = (
+            primary_counts.groupby(["year", "primary_topic"], as_index=False)["paper_count"]
+            .sum()
+        )
+
+    primary_counts = primary_counts.merge(yearly_totals, on="year", how="left")
     primary_counts["share"] = primary_counts["paper_count"] / primary_counts["year_total"] * 100
     return primary_counts
 
@@ -563,6 +673,44 @@ def create_dashboard(df: pd.DataFrame) -> Dash:
                     ),
                     html.Div(
                         [
+                            html.Label("Primary topic lines"),
+                            dcc.Slider(
+                                id="primary-topic-limit",
+                                min=PRIMARY_TOPIC_MIN,
+                                max=PRIMARY_TOPIC_MAX,
+                                step=1,
+                                value=PRIMARY_TOPIC_DEFAULT,
+                                marks={
+                                    PRIMARY_TOPIC_MIN: str(PRIMARY_TOPIC_MIN),
+                                    PRIMARY_TOPIC_DEFAULT: str(PRIMARY_TOPIC_DEFAULT),
+                                    PRIMARY_TOPIC_MAX: str(PRIMARY_TOPIC_MAX),
+                                },
+                                tooltip={"placement": "bottom", "always_visible": False},
+                            ),
+                        ],
+                        style=FILTER_CARD_STYLE,
+                    ),
+                    html.Div(
+                        [
+                            html.Label("Other topic groups"),
+                            dcc.Slider(
+                                id="other-topic-groups",
+                                min=OTHER_TOPIC_BUCKETS_MIN,
+                                max=OTHER_TOPIC_BUCKETS_MAX,
+                                step=1,
+                                value=OTHER_TOPIC_BUCKETS_DEFAULT,
+                                marks={
+                                    OTHER_TOPIC_BUCKETS_MIN: str(OTHER_TOPIC_BUCKETS_MIN),
+                                    OTHER_TOPIC_BUCKETS_DEFAULT: str(OTHER_TOPIC_BUCKETS_DEFAULT),
+                                    OTHER_TOPIC_BUCKETS_MAX: str(OTHER_TOPIC_BUCKETS_MAX),
+                                },
+                                tooltip={"placement": "bottom", "always_visible": False},
+                            ),
+                        ],
+                        style=FILTER_CARD_STYLE,
+                    ),
+                    html.Div(
+                        [
                             html.Label("Fine topic slots"),
                             dcc.Slider(
                                 id="fine-topic-limit",
@@ -750,6 +898,8 @@ def create_dashboard(df: pd.DataFrame) -> Dash:
         Input("domain-filter", "value"),
         Input("benchmark-task-filter", "value"),
         Input("benchmark-mode", "value"),
+        Input("primary-topic-limit", "value"),
+        Input("other-topic-groups", "value"),
         Input("trend-metric", "value"),
         Input("fine-topic-limit", "value"),
         Input("text-search", "value"),
@@ -764,6 +914,8 @@ def create_dashboard(df: pd.DataFrame) -> Dash:
         selected_domains,
         selected_tasks,
         benchmark_mode,
+        primary_topic_limit,
+        other_topic_groups,
         trend_metric,
         fine_topic_limit,
         text_query,
@@ -811,9 +963,30 @@ def create_dashboard(df: pd.DataFrame) -> Dash:
                 [],
             )
 
-        primary_trends = build_primary_topic_trends(filtered)
+        primary_topic_limit = int(primary_topic_limit or PRIMARY_TOPIC_DEFAULT)
+        other_topic_groups = int(other_topic_groups or OTHER_TOPIC_BUCKETS_DEFAULT)
+        primary_trends = build_primary_topic_trends(
+            filtered,
+            limit=primary_topic_limit,
+            other_buckets=other_topic_groups,
+        )
         y_axis = "share" if trend_metric == "share" else "paper_count"
         y_label = "Share of papers (%)" if y_axis == "share" else "Paper count"
+        has_other = (
+            not primary_trends.empty
+            and primary_trends["primary_topic"].eq(OTHER_TOPIC_LABEL).any()
+        )
+        has_grouped_other = has_other or (
+            not primary_trends.empty
+            and primary_trends["primary_topic"].str.startswith(OTHER_TOPIC_PREFIX).any()
+        )
+        if primary_topic_limit:
+            topic_label = f"Top {primary_topic_limit}"
+            if has_grouped_other:
+                topic_label += " + grouped others"
+            title_suffix = f" ({topic_label})"
+        else:
+            title_suffix = ""
         trend_fig = px.line(
             primary_trends,
             x="year",
@@ -827,7 +1000,7 @@ def create_dashboard(df: pd.DataFrame) -> Dash:
                 "year": "Year",
                 "primary_topic": "Primary topic",
             },
-            title="Primary topic share across selected filters",
+            title=f"Primary topic share across selected filters{title_suffix}",
             hover_data={"paper_count": True, "share": ":.2f"},
         )
         trend_fig.update_layout(yaxis_title=y_label)
@@ -909,10 +1082,20 @@ def create_dashboard(df: pd.DataFrame) -> Dash:
 
         summary_cards = _render_summary_cards(total, topic_count, bench_count, coverage)
         summaries = summarise_trends(primary_trends)
-        risers = [item for item in summaries if item.share_change > 0][:3]
-        decliners = [item for item in sorted(summaries, key=lambda s: s.share_change) if item.share_change < 0][
-            :3
-        ]
+        risers = [
+            item
+            for item in summaries
+            if item.share_change > 0
+            and item.topic not in {OTHER_TOPIC_LABEL, "Unknown"}
+            and not item.topic.startswith(OTHER_TOPIC_PREFIX)
+        ][:3]
+        decliners = [
+            item
+            for item in sorted(summaries, key=lambda s: s.share_change)
+            if item.share_change < 0
+            and item.topic not in {OTHER_TOPIC_LABEL, "Unknown"}
+            and not item.topic.startswith(OTHER_TOPIC_PREFIX)
+        ][:3]
         insight_children: list = []
         if risers:
             insight_children.append(html.H4("Fastest-growing primary topics"))
