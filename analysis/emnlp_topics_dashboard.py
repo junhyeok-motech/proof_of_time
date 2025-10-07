@@ -3,9 +3,10 @@
 from __future__ import annotations
 
 import argparse
+import json
+import math
 import textwrap
 import zipfile
-import math
 from dataclasses import dataclass
 from functools import lru_cache
 import io
@@ -16,11 +17,12 @@ from collections.abc import Iterable as IterableABC
 
 import pandas as pd
 import plotly.express as px
+import plotly.graph_objects as go
 from dash import Dash, Input, Output, State, dash_table, dcc, html
 from dash.exceptions import PreventUpdate
 
 try:
-    from datasets import load_from_disk
+    from datasets import Dataset, DatasetDict, concatenate_datasets, load_from_disk
 except ImportError as exc:  # pragma: no cover - handled at runtime
     raise SystemExit(
         "The 'datasets' package is required. Install it with `pip install datasets dash`."
@@ -108,12 +110,60 @@ def _ensure_dataset() -> Path:
     return DATASET_DIR
 
 
+def _load_dataset_from_arrow(dataset_path: Path) -> DatasetDict:
+    """Reconstruct a DatasetDict directly from Arrow shards when metadata is incompatible."""
+
+    dataset_dict_path = dataset_path / "dataset_dict.json"
+    split_names: list[str] = []
+    if dataset_dict_path.exists():
+        try:
+            with dataset_dict_path.open("r", encoding="utf-8") as handle:
+                split_names = json.load(handle).get("splits", [])
+        except json.JSONDecodeError:
+            split_names = []
+    if not split_names:
+        split_names = sorted(
+            entry.name for entry in dataset_path.iterdir() if entry.is_dir()
+        )
+
+    reconstructed: dict[str, Dataset] = {}
+    for split_name in split_names:
+        split_dir = dataset_path / split_name
+        if not split_dir.is_dir():
+            continue
+        arrow_files = sorted(split_dir.glob("*.arrow"))
+        if not arrow_files:
+            continue
+        datasets = [Dataset.from_file(str(arrow_file)) for arrow_file in arrow_files]
+        if not datasets:
+            continue
+        combined = datasets[0] if len(datasets) == 1 else concatenate_datasets(datasets)
+        reconstructed[split_name] = combined
+
+    if not reconstructed:
+        raise RuntimeError(
+            "Failed to reconstruct the dataset from Arrow files. "
+            "Ensure the dataset directory contains '*.arrow' shards."
+        )
+
+    print(
+        "Loaded dataset using Arrow fallback due to incompatible saved metadata.",
+    )
+    return DatasetDict(reconstructed)
+
+
 @lru_cache(maxsize=1)
 def _load_dataset(path: Path | None = None) -> pd.DataFrame:
     """Load all EMNLP splits into a single pandas DataFrame."""
 
     dataset_path = _ensure_dataset() if path is None else path
-    dataset = load_from_disk(str(dataset_path))
+    try:
+        dataset = load_from_disk(str(dataset_path))
+    except TypeError as exc:
+        message = str(exc)
+        if "dataclass" not in message:
+            raise
+        dataset = _load_dataset_from_arrow(dataset_path)
 
     frames: list[pd.DataFrame] = []
     for split_name, split_ds in dataset.items():
@@ -348,10 +398,12 @@ def filter_papers(
     return filtered
 
 
-def _empty_figure(title: str, subtitle: str) -> dict:
-    fig = px.scatter(x=[], y=[])
+def _empty_figure(title: str, subtitle: str) -> go.Figure:
+    fig = go.Figure()
     fig.update_layout(
         title=title,
+        xaxis=dict(visible=False),
+        yaxis=dict(visible=False),
         annotations=[
             dict(
                 text=subtitle,
@@ -583,6 +635,7 @@ def create_dashboard(df: pd.DataFrame) -> Dash:
                     html.Div(id="summary-cards"),
                 ]
             ),
+            html.Div(id="no-results-banner"),
             html.Div(
                 [
                     dcc.Loading(dcc.Graph(id="primary-trends"), type="cube"),
@@ -685,6 +738,7 @@ def create_dashboard(df: pd.DataFrame) -> Dash:
         Output("domain-distribution", "figure"),
         Output("papers-table", "data"),
         Output("summary-cards", "children"),
+        Output("no-results-banner", "children"),
         Output("insights-panel", "children"),
         Output("top-authors-table", "data"),
         Output("top-benchmark-table", "data"),
@@ -741,6 +795,17 @@ def create_dashboard(df: pd.DataFrame) -> Dash:
                 empty_fig,
                 [],
                 _render_summary_cards(0, 0, 0, 0.0),
+                html.Div(
+                    "No papers match the current filters. Try widening the selection to see results.",
+                    style={
+                        "background": "#fdecea",
+                        "border": "1px solid #f5c2c0",
+                        "color": "#611a15",
+                        "padding": "12px 16px",
+                        "borderRadius": "6px",
+                        "margin": "16px 0",
+                    },
+                ),
                 html.P("Adjust the filters to see insights."),
                 [],
                 [],
@@ -892,6 +957,7 @@ def create_dashboard(df: pd.DataFrame) -> Dash:
             domain_fig,
             table_data,
             summary_cards,
+            None,
             insight_children,
             top_authors.to_dict("records"),
             top_benchmarks.to_dict("records"),
