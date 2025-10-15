@@ -21,6 +21,7 @@ from inspect_ai.tool import bash, bash_session, python, text_editor, think
 
 SANDBOX_ROOT = Path(__file__).resolve().parent / "sandbox"
 MCQ_DATASET_PATH = Path(__file__).resolve().parent / "mcq_dataset.jsonl"
+HISTORICAL_MCQ_PATH = Path(__file__).resolve().parent / "historical_mcq_dataset.jsonl"
 
 
 def _load_samples(path: Path) -> Iterable[Sample]:
@@ -55,6 +56,11 @@ def build_mcq_dataset() -> Dataset:
     return MemoryDataset(samples)
 
 
+def build_historical_mcq_dataset() -> Dataset:
+    """Create an Inspect dataset from the historical MCQ JSONL file."""
+    samples: List[Sample] = list(_load_samples(HISTORICAL_MCQ_PATH))
+    return MemoryDataset(samples)
+
 def build_agent():
     """Configure a React agent confined to the EMNLP sandbox."""
     return react(
@@ -88,4 +94,18 @@ def emnlp_awards_mcq_task() -> Task:
         scorer=match(),
         sandbox="docker",
         metadata={"benchmark": "emnlp_awards_mcq"},
+    )
+
+
+@task()
+def emnlp_historical_mcq_task() -> Task:
+    """Multiple-choice benchmark sampling historical main/findings papers."""
+    dataset = build_historical_mcq_dataset()
+    agent = build_agent()
+    return Task(
+        dataset=dataset,
+        solver=agent,
+        scorer=match(),
+        sandbox="docker",
+        metadata={"benchmark": "emnlp_historical_mcq"},
     )
