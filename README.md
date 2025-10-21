@@ -31,3 +31,22 @@ The export mode now writes:
 * `emnlp_benchmark_yearly.csv` — annual benchmark totals and shares across tracks.
 * `emnlp_domain_summary.csv` — aggregated domain-tag activity across the corpus.
 * `emnlp_author_summary.csv` — frequency table of author appearances (deduplicated).
+
+## Inspect AI Benchmarks
+
+This project includes Inspect AI benchmarks for paper classification using ReAct agents. See `inspect/emnlp_react/` for details.
+
+### Running with FreeInference
+
+Use Inspect AI's OpenAI provider with a custom base URL:
+
+```bash
+export OPENAI_API_KEY="your-freeinference-key"
+
+inspect eval inspect/emnlp_react/benchmark.py@emnlp_awards_mcq_task \
+    --model openai/llama-3.3-70b-instruct \
+    --model-base-url https://api.freeinference.org/v1 \
+    --limit 5
+```
+
+See [USING_FREEINFERENCE.md](USING_FREEINFERENCE.md) for more options.

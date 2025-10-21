@@ -17,6 +17,7 @@ from inspect_ai import Task, task
 from inspect_ai.agent import react
 from inspect_ai.dataset import Dataset, MemoryDataset, Sample
 from inspect_ai.scorer import match
+from inspect_ai.solver import generate, system_message
 from inspect_ai.tool import bash, bash_session, python, text_editor, think
 
 SANDBOX_ROOT = Path(__file__).resolve().parent / "sandbox"
@@ -66,12 +67,21 @@ def build_agent():
     return react(
         name="emnlp-react",
         prompt=(
-            "You are an research assistant working entirely inside the "
-            "mounted sandbox. Use the provided tools to inspect the CSV data "
-            "(notably sandbox/data/accepted_papers.csv) and any supporting "
-            "files before answering. When the prompt is to select a "
-            "recognition tier, choose exactly one label from Findings, Main, "
-            "Outstanding, or Best. Never rely on outside knowledge."
+            "You are a research paper quality assessor. Your task is to classify papers into recognition tiers "
+            "by comparing them to previous award-winning and accepted papers.\n\n"
+            "Recognition tiers:\n"
+            "- Best: Best Paper Award winners (groundbreaking, paradigm-shifting work)\n"
+            "- Outstanding: Outstanding Paper Awards (exceptional contributions)\n"
+            "- Main: Main conference track (solid accepted papers)\n"
+            "- Findings: Findings track (good work, below main bar)\n\n"
+            "PROCESS:\n"
+            "1. Use python() to read and analyze sandbox/data/accepted_papers.csv\n"
+            "2. Look at papers with 'Best' or 'Outstanding' awards to understand patterns\n"
+            "3. Compare the given paper's novelty, impact, and quality to these examples\n"
+            "4. Make your classification decision\n"
+            "5. Respond with ONLY ONE WORD: Best, Outstanding, Main, or Findings\n\n"
+            "CRITICAL: After using tools to investigate, provide your final answer as a SINGLE WORD on its own line. "
+            "Do not add explanations after your answer. The answer must be exactly one of: Best, Outstanding, Main, Findings"
         ),
         tools=[
             think(),
@@ -85,7 +95,7 @@ def build_agent():
 
 @task()
 def emnlp_awards_mcq_task() -> Task:
-    """Multiple-choice benchmark that uses award metadata in the sandbox."""
+    """Multiple-choice benchmark - ReAct agent analyzes previous papers to make classification."""
     dataset = build_mcq_dataset()
     agent = build_agent()
     return Task(
@@ -93,7 +103,32 @@ def emnlp_awards_mcq_task() -> Task:
         solver=agent,
         scorer=match(),
         sandbox="docker",
+        max_messages=30,  # Prevent infinite loops
         metadata={"benchmark": "emnlp_awards_mcq"},
+    )
+
+
+@task()
+def emnlp_awards_mcq_simple_task() -> Task:
+    """Simple MCQ benchmark - direct generation without tools (fast but no investigation)."""
+    dataset = build_mcq_dataset()
+    return Task(
+        dataset=dataset,
+        solver=[
+            system_message(
+                "You are an expert at classifying research papers into conference recognition tiers. "
+                "Given a paper's title and abstract, determine which tier it belongs to:\n\n"
+                "- **Best**: Best Paper Award winners (groundbreaking, top 0.1% contributions)\n"
+                "- **Outstanding**: Outstanding Paper Award (exceptional quality, top 1%)\n"
+                "- **Main**: Main conference track (high quality, accepted papers)\n"
+                "- **Findings**: Findings track (good work, didn't meet main conference bar)\n\n"
+                "Respond with ONLY ONE WORD: Best, Outstanding, Main, or Findings.\n"
+                "Do not explain your reasoning. Just output the single tier name."
+            ),
+            generate(),
+        ],
+        scorer=match(),
+        metadata={"benchmark": "emnlp_awards_mcq_simple"},
     )
 
 
@@ -107,5 +142,6 @@ def emnlp_historical_mcq_task() -> Task:
         solver=agent,
         scorer=match(),
         sandbox="docker",
+        max_messages=30,  # Limit conversation turns to prevent loops
         metadata={"benchmark": "emnlp_historical_mcq"},
     )
