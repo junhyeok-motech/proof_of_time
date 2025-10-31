@@ -15,6 +15,9 @@ CLAUDE.md
 # C extensions
 *.so
 
+#sandbox data
+inspect/citation_react/sandbox/data/
+
 # Distribution / packaging
 .Python
 build/
