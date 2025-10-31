@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  default:
+    image: python:3.11-slim
+    network_mode: none  # Disable internet access
+    volumes:
+      - ./data:/dataset:ro  # Mount data as read-only
+    working_dir: /workspace
+    command: sleep infinity
+    environment:
+      - PYTHONUNBUFFERED=1
