@@ -36,6 +36,10 @@ The export mode now writes:
 
 This project includes Inspect AI benchmarks for paper classification using ReAct agents. See `inspect/emnlp_react/` for details.
 
+### Faculty Future-Work Benchmark
+
+`inspect/future_work_react/` mirrors the EMNLP prototype but uses per-professor publication CSVs to ask 2025 research forecasting questions (professor focus, article attribution, and field-level focus). Build the sandbox via `python dataset_building/generate_faculty_futurework.py` and run tasks from `inspect/future_work_react/benchmark.py`.
+
 ### Running with FreeInference
 
 Use Inspect AI's OpenAI provider with a custom base URL:
