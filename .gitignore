@@ -3,20 +3,27 @@ __pycache__/
 *.py[cod]
 *$py.class
 
-# pyproject.toml
-pyproject.toml
-
-# claude.md
-CLAUDE.md
-
 # pdm related
 .pdm.toml
 
 # C extensions
 *.so
 
-#sandbox data
-inspect/citation_react/sandbox/data/
+# Sandbox data directories
+benchmarks/*/sandbox/data/
+
+# Large evaluation logs and archives (keep locally)
+logs_all/
+logs_all_archive/
+*.zip
+
+# Large analysis artifacts
+analysis/agent_behavior/outputs/all_samples_*.jsonl
+analysis/agent_behavior/outputs/agent_behavior_analysis.jsonl
+
+# Generated plots and tables (can be regenerated)
+analysis/comprehensive/plots/
+analysis/comprehensive/tables/
 
 # Distribution / packaging
 .Python

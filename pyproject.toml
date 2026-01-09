@@ -1,0 +1,41 @@
+[project]
+name = "proof-of-time"
+version = "0.1.0"
+description = "Benchmarks for evaluating LLM agents on academic paper analysis tasks using Inspect AI"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [
+    {name = "AIM Harvard", email = "aim@seas.harvard.edu"}
+]
+
+[project.urls]
+Homepage = "https://github.com/shan23chen/proof_of_time"
+Repository = "https://github.com/shan23chen/proof_of_time"
+Documentation = "https://github.com/shan23chen/proof_of_time/blob/main/README.md"
+Issues = "https://github.com/shan23chen/proof_of_time/issues"
+Dataset = "https://huggingface.co/datasets/AIM-Harvard/proof-of-time"
+
+dependencies = [
+    "anthropic[vertex]>=0.75.0",
+    "datasets>=4.4.2",
+    "google-genai>=1.53.0",
+    "google-generativeai>=0.8.6",
+    "groq>=0.36.0",
+    "inspect-ai>=0.3.150",
+    "matplotlib>=3.10.8",
+    "openai>=2.8.1",
+    "plotly>=6.5.0",
+    "vertexai>=1.71.1",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "ruff>=0.1.0",
+    "black>=23.0.0",
+]
+dashboard = [
+    "dash>=2.14.0",
+    "pandas>=2.1.0",
+]
