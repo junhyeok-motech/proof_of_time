@@ -360,5 +360,4 @@ We welcome contributions! To add new benchmarks or improve existing ones:
 ## Contact
 
 - **Issues**: https://github.com/shan23chen/proof_of_time/issues
-- **Email**: aim@seas.harvard.edu
 - **Project**: AIM Harvard
