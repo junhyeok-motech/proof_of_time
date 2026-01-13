@@ -1,22 +1,3 @@
----
-license: mit
-task_categories:
-- question-answering
-- text-classification
-tags:
-- academic-papers
-- llm-agents
-- benchmarking
-- inspect-ai
-- react-agents
-- citations
-- research-trends
-size_categories:
-- 1K<n<10K
-language:
-- en
----
-
 # Proof of Time: Academic Paper Analysis Benchmarks
 
 This dataset contains benchmarks for evaluating LLM agents on academic paper analysis tasks that require understanding research trends, citations, and future directions. All evaluation data uses **post-training-cutoff** (2025) papers to avoid data contamination.
