@@ -21,6 +21,9 @@ analysis/
 │   ├── outputs/             # Generated analysis outputs
 │   └── README.md            # Detailed documentation
 │
+├── emnlp_topics_dashboard.py    # EMNLP paper topic explorer
+├── future_work_dashboard.py     # Faculty prediction explorer
+│
 └── README.md                # This file
 ```
 
@@ -72,6 +75,69 @@ python sample_task_examples_stratified.py \
 
 See [agent_behavior/README.md](agent_behavior/README.md) for detailed documentation.
 
+### EMNLP Topics Dashboard
+
+Interactive explorer for EMNLP paper topics, trends, and benchmark activity (2021-2024):
+
+```bash
+# Launch interactive dashboard
+python analysis/emnlp_topics_dashboard.py
+
+# Specify host and port
+python analysis/emnlp_topics_dashboard.py --host 0.0.0.0 --port 8080
+
+# Export CSV summaries without launching UI
+python analysis/emnlp_topics_dashboard.py --export
+```
+
+**Features:**
+- Filter by year, venue, topic, domain, benchmark task
+- Primary topic trend visualization
+- Fine-grained topic heatmaps
+- Benchmark paper statistics
+- Top authors and domain analysis
+- Download filtered datasets as CSV
+
+Access at http://127.0.0.1:8050 (default).
+
+**Exported Reports** (with `--export`):
+- `reports/emnlp_topics_summary.csv` - Primary topic trends
+- `reports/emnlp_finetopic_summary.csv` - Fine-grained topic counts
+- `reports/emnlp_benchmark_summary.csv` - Benchmark statistics
+- `reports/emnlp_domain_summary.csv` - Domain distribution
+- `reports/emnlp_author_summary.csv` - Author frequency
+
+### Future Work Dashboard
+
+Interactive explorer for AI faculty research direction predictions:
+
+```bash
+# Launch interactive dashboard
+python analysis/future_work_dashboard.py
+
+# Specify host and port
+python analysis/future_work_dashboard.py --host 0.0.0.0 --port 8080
+
+# Export CSV summaries without launching UI
+python analysis/future_work_dashboard.py --export
+```
+
+**Features:**
+- Filter by verification status, score range, verdict
+- Precision/recall/F1 score distribution
+- Keyword prediction vs actual comparison
+- Field prediction accuracy analysis
+- Top performers ranking
+- Download filtered predictions as CSV
+
+Access at http://127.0.0.1:8050 (default).
+
+**Exported Reports** (with `--export`):
+- `future_work_results/reports/prediction_summary.csv` - Overall prediction results
+- `future_work_results/reports/keyword_analysis.csv` - Predicted vs actual keywords
+- `future_work_results/reports/field_analysis.csv` - Field prediction accuracy
+- `future_work_results/reports/top_performers.csv` - Top performing predictions
+
 ## Prerequisites
 
 ### Input Data
@@ -97,6 +163,10 @@ uv sync
 # - matplotlib
 # - seaborn
 # - numpy
+
+# For interactive dashboards (emnlp_topics_dashboard.py, future_work_dashboard.py):
+uv sync --extra dashboard
+# Or: pip install dash plotly datasets
 ```
 
 ## Output Examples
