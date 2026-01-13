@@ -2,7 +2,7 @@
 
 This repository contains the code for the paper:
 
-**Proof of Time: Evaluating Scientific Idea Judgments**
+**Proof of Time: A Benchmark for Evaluating Scientific Idea Judgments**
 
 Bingyang Ye*, Shan Chen*, Jingxuan Tu, Chen Liu, Zidi Xiong, Samuel Schmidgall, Danielle S. Bitterman
 
@@ -13,15 +13,18 @@ Bingyang Ye*, Shan Chen*, Jingxuan Tu, Chen Liu, Zidi Xiong, Samuel Schmidgall, 
 If you use this codebase in your research, please cite our work:
 
 ```bibtex
-@article{ye2025proofoftime,
-  title={Proof of Time: Evaluating Scientific Idea Judgments},
-  author={Ye, Bingyang and Chen, Shan and Tu, Jingxuan and Liu, Chen and Xiong, Zidi and Schmidgall, Samuel and Bitterman, Danielle S.},
-  journal={arXiv preprint arXiv:2501.xxxxx},
-  year={2025}
+@misc{ye2026prooftimebenchmarkevaluating,
+      title={Proof of Time: A Benchmark for Evaluating Scientific Idea Judgments},
+      author={Bingyang Ye and Shan Chen and Jingxuan Tu and Chen Liu and Zidi Xiong and Samuel Schmidgall and Danielle S. Bitterman},
+      year={2026},
+      eprint={2601.07606},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2601.07606},
 }
 ```
 
-Preprint: [Link when available]
+Preprint: [https://arxiv.org/abs/2601.07606](https://arxiv.org/abs/2601.07606)
 
 ## Dataset Citation
 
