@@ -31,10 +31,10 @@ Preprint: [https://arxiv.org/abs/2601.07606](https://arxiv.org/abs/2601.07606)
 The benchmark datasets are available on HuggingFace:
 
 ```bibtex
-@dataset{proof-of-time-dataset-2025,
-  title={Proof of Time: Scientific Idea Judgment Benchmarks},
+@dataset{proof-of-time-dataset-2026,
+  title={Proof of Time: A Benchmark for Evaluating Scientific Idea Judgments},
   author={Ye, Bingyang and Chen, Shan and Tu, Jingxuan and Liu, Chen and Xiong, Zidi and Schmidgall, Samuel and Bitterman, Danielle S.},
-  year={2025},
+  year={2026},
   publisher={HuggingFace},
   url={https://huggingface.co/datasets/AIM-Harvard/proof-of-time}
 }
