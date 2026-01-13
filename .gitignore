@@ -6,6 +6,9 @@ __pycache__/
 # Temporary web content (not for public release)
 web/
 
+# HuggingFace dataset (uploaded separately to HuggingFace Hub)
+huggingface_data/
+
 # pdm related
 .pdm.toml
 
