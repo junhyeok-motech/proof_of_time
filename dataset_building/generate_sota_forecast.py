@@ -154,7 +154,7 @@ def main() -> None:
     parser.add_argument(
         "--sandbox-dir",
         type=Path,
-        default=Path("inspect/sota_forecast/sandbox/data"),
+        default=Path("proof_of_time/data"),
         help="Directory where sandbox data will be written.",
     )
     parser.add_argument(

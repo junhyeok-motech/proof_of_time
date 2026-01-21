@@ -373,7 +373,7 @@ def main() -> None:
     parser.add_argument(
         "--sandbox-dir",
         type=Path,
-        default=Path("inspect/future_work_react/sandbox/data"),
+        default=Path("proof_of_time/data"),
         help="Directory to store sandbox artifacts (JSONL + raw CSV copies).",
     )
     parser.add_argument(

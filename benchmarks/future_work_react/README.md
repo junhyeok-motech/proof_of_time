@@ -5,18 +5,23 @@ This benchmark evaluates LLM agents on predicting 2025 research focus areas for 
 ## Overview
 
 The agent must predict **2025 research trends** for AI professors and fields using only publication data (2018-2025) available in a Docker sandbox:
+
 - **Faculty publications database**: ~16,000 publications across 76 AI faculty with metadata, venues, and field classifications
 - **Per-professor CSV exports**: Individual files with complete publication history per professor
 - **Evaluation datasets**: 158 total tasks across three task types
 
 This setup mimics real-world research trend prediction: using publication history to predict current research focus.
 
+You can download our generated questions from: https://huggingface.co/datasets/AIM-Harvard/proof-of-time/tree/main/benchmarks
+
 ## Tasks
 
 ### 1. Professor Field Prediction (`faculty_professor_field_task`)
+
 **Question**: Given a professor's 2025 publications, which field best captures their research agenda?
 
 **Example**:
+
 ```
 Professor: Aditi Raghunathan
 2025 Titles:
@@ -34,9 +39,11 @@ Answer: Foundation Models & LLMs
 **Dataset**: 73 tasks
 
 ### 2. Professor Article Attribution (`faculty_professor_article_task`)
+
 **Question**: Which of these 2025 papers did the professor author/co-author (or None)?
 
 **Example**:
+
 ```
 Professor: Andrew Ng
 Which of the following 2025 papers did they author/co-author?
@@ -53,9 +60,11 @@ Answer with: A, B, C, D, or None
 **Dataset**: 76 tasks (includes cases where correct answer is "None")
 
 ### 3. Field Focus Prediction (`faculty_field_focus_task`)
+
 **Question**: Given representative 2025 papers, which field do they belong to?
 
 **Example**:
+
 ```
 Representative 2025 papers:
 1. Paper about LLM reasoning (abstract excerpt)
@@ -72,6 +81,7 @@ Answer: AI Safety & Alignment
 **Dataset**: 9 tasks (one per major research field)
 
 ### 4. All Tasks Combined (`faculty_all_tasks`)
+
 Run all 158 tasks together (73 + 76 + 9).
 
 ## Running the Benchmark
@@ -137,13 +147,15 @@ inspect eval inspect/future_work_react/benchmark.py@faculty_professor_field_simp
 ## Sandbox Environment
 
 ### Data Files
+
 Located in `sandbox/data/` (mounted at `/workspace`):
-- `faculty_publications.jsonl`: Aggregated publications with field classifications (~16,000 rows)
-- `faculty_publications/*.csv`: Per-professor CSV files (76 professors)
+
+- `historical_papers_2021_2024.jsonl`: 38,330 papers from 2021-2024 with citations
 
 ### Sample Data Structure
 
 **faculty_publications.jsonl**:
+
 ```json
 {
   "professor": "Aditi Raghunathan",
@@ -160,6 +172,7 @@ Located in `sandbox/data/` (mounted at `/workspace`):
 ```
 
 ### Available Tools
+
 - `bash()`: Execute shell commands
 - `python()`: Run Python code for data analysis
 - `bash_session()`: Persistent shell session
@@ -167,11 +180,13 @@ Located in `sandbox/data/` (mounted at `/workspace`):
 - `think()`: Chain-of-thought reasoning
 
 ### Network Access
+
 **Disabled** - agent must use only sandbox data
 
 ## Research Fields
 
 The benchmark uses 9 major AI research fields:
+
 1. **Foundation Models & LLMs** - Language models, transformers, pretraining
 2. **AI Safety & Alignment** - Safety, robustness, fairness, interpretability
 3. **Robotics & Embodied AI** - Manipulation, control, navigation
@@ -187,6 +202,7 @@ Fields are assigned using keyword matching on titles, abstracts, and venues.
 ## Agent Strategy
 
 The React agent is prompted to:
+
 1. **Load publication database** - Explore JSONL and CSV files
 2. **Filter for 2025 publications** - Focus on current research trends
 3. **Search for professor/field** - Match by name, keywords, or themes
@@ -195,11 +211,11 @@ The React agent is prompted to:
 
 ## Expected Performance
 
-| Task | Random Baseline | Expected Agent |
-|------|----------------|----------------|
-| Professor Field | 25% | 60-80% |
-| Professor Article | 20% | 40-60% |
-| Field Focus | 11% | 70-90% |
+| Task              | Random Baseline | Expected Agent |
+| ----------------- | --------------- | -------------- |
+| Professor Field   | 25%             | 60-80%         |
+| Professor Article | 20%             | 40-60%         |
+| Field Focus       | 11%             | 70-90%         |
 
 *Note: Professor field and article tasks are easier than citation prediction because the correct answer exists in the sandbox data.*
 
@@ -217,6 +233,7 @@ python dataset_building/generate_faculty_futurework.py \
 ```
 
 The script:
+
 - Parses professor CSV files with publications
 - Infers research fields using keyword matching
 - Generates three MCQ datasets with appropriate distractors
@@ -225,6 +242,7 @@ The script:
 ## Troubleshooting
 
 ### Docker issues
+
 ```bash
 # Check Docker is running
 docker ps
@@ -234,6 +252,7 @@ docker pull python:3.11-slim
 ```
 
 ### Data not accessible in sandbox
+
 ```bash
 # Verify data exists
 ls -lh inspect/future_work_react/sandbox/data/
@@ -244,6 +263,7 @@ ls -lh inspect/future_work_react/sandbox/data/
 ```
 
 ### Regenerate datasets
+
 ```bash
 python dataset_building/generate_faculty_futurework.py
 ```

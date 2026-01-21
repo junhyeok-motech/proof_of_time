@@ -8,7 +8,10 @@
 
 **Paper**: *Proof of Time: A Benchmark for Evaluating Scientific Idea Judgments* (Under Review)
 
+You can download our generated questions from: https://huggingface.co/datasets/AIM-Harvard/proof-of-time/tree/main/benchmarks
+
 **Key Features:**
+
 - **Time-Partitioned**: Ground truth arrives naturally as time passes—no manual labeling needed
 - **Semi-Verifiable**: Benchmarks link to real-world signals (citations, awards, leaderboards) that become observable post-cutoff
 - **Scalable**: Over 30,000 instances spanning four task families
@@ -71,14 +74,14 @@ The name reflects our focus on temporal reasoning: agents must analyze historica
 
 ## Task Families
 
-The suite includes 4 task families:
+The suite includes 4 task families(you can sample and generated a new test set anytime):
 
-| Task Family | Description | Agent Access |
-|-------------|-------------|--------------|
-| **Impact Prediction** | Forecasting paper influence (citations) from limited cues | Historical papers with citation counts |
-| **Scientific Value** | Predicting peer-review awards (Best Papers) | Conference accepted papers |
-| **Research Evolution** | Longitudinal reasoning about faculty trajectories | Per-professor publication histories |
-| **Technological Frontier** | Extrapolating benchmark progress (SOTA) | Frontier model benchmark scores |
+| Task Family                      | Description                                               | Agent Access                           |
+| -------------------------------- | --------------------------------------------------------- | -------------------------------------- |
+| **Impact Prediction**      | Forecasting paper influence (citations) from limited cues | Historical papers with citation counts |
+| **Scientific Value**       | Predicting peer-review awards (Best Papers)               | Conference accepted papers             |
+| **Research Evolution**     | Longitudinal reasoning about faculty trajectories         | Per-professor publication histories    |
+| **Technological Frontier** | Extrapolating benchmark progress (SOTA)                   | Frontier model benchmark scores        |
 
 ### 1. Impact Prediction ([benchmarks/citation_react/](benchmarks/citation_react/))
 
@@ -175,6 +178,7 @@ bash run_message_limit_sweep.sh
 ```
 
 **Supported Models:**
+
 - OpenAI: `gpt-5.2`, `gpt-5.1`, `gpt-5-mini`, `gpt-5-nano`
 - Google: `gemini-3-pro`, `gemini-3-flash`, `vertex/gemini-2.5-pro/flash`
 - Anthropic: `vertex/claude-opus-4-5`, `vertex/claude-sonnet-4-5`, `vertex/claude-haiku-4-5`
@@ -253,6 +257,7 @@ python main.py --report-only
 ```
 
 **Outputs:**
+
 - `plots/` - Performance visualizations by model, task, ablation
 - `tables/` - CSV summaries of results
 - `REPORT.md` - Comprehensive markdown report
@@ -313,15 +318,7 @@ Agentic systems generally outperform zero-shot baselines on tasks requiring evid
   <img src="assets/simple_vs_agentic.png" alt="Agent vs Zero-shot Comparison" width="500"/>
 </p>
 
-### Performance Across Models and Tasks
-
-<p align="center">
-  <img src="assets/model_task_heatmap_msg50.png" alt="Model-Task Performance Heatmap" width="700"/>
-</p>
-
-*Performance heatmap across different models and tasks at high message limits.*
-
-## Citation
+### Citation
 
 If you use this benchmark suite in your research, please cite our work:
 

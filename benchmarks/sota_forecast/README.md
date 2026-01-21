@@ -2,6 +2,8 @@
 
 This benchmark asks Inspect AI agents to reason about frontier-model performance metrics. Agents are confined to a sandbox containing a JSON snapshot of the October&nbsp;2025 SOTA table (instruction + base models). Each sample asks the agent to place a benchmark’s SOTA score into a coarse bucket (`a: 0-20`, …, `e: 80-100`) and respond with the letter only.
 
+You can download our generated questions from: https://huggingface.co/datasets/AIM-Harvard/proof-of-time/tree/main/benchmarks
+
 ## Layout
 
 - `benchmark.py` – defines the Inspect tasks and React agent configuration.
@@ -26,4 +28,6 @@ inspect eval inspect/sota_forecast/benchmark.py@sota_bucket_task \
   --limit 5
 ```
 
-The agent must inspect `sandbox/data/sota_metrics.json` using the provided tools (`python()`, `bash()`, etc.) before answering, then output only the bucket letter (`a`–`e`).
+The agent must inspect `sandbox/data/historical_papers_2021_2024.jsonl` using the provided tools (`python()`, `bash()`, etc.) before answering, then output only the bucket letter (`a `–`e`).
+
+sandbox data can be find here: https://huggingface.co/datasets/AIM-Harvard/proof-of-time/tree/main/sandbox_data/citation
