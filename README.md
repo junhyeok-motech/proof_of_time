@@ -206,16 +206,16 @@ git clone https://huggingface.co/datasets/AIM-Harvard/proof-of-time
 
 ```
 benchmarks/
-├── award_react/          # 641 KB - Award prediction tasks
-├── citation_react/       # 2.7 MB - Citation forecasting tasks
-├── future_work_react/    # 469 KB - Faculty prediction tasks
-└── sota_forecast/        # 26 KB - SOTA benchmark tasks
+├── award_react/          Award prediction tasks
+├── citation_react/       Citation forecasting tasks
+├── future_work_react/    Faculty prediction tasks
+└── sota_forecast/        SOTA benchmark tasks
 
 sandbox_data/
-├── citation/             # 21 MB - Historical papers with citations
-├── award/                # 19 MB - Conference accepted papers
-├── faculty/              # 38 MB - Faculty publication histories
-└── sota/                 # 8.7 KB - Frontier model benchmark scores
+├── citation/             Historical papers with citations
+├── award/                Conference accepted papers with tiers
+├── faculty/              Conference accepted papers
+└── sota/                 Conference accepted papers
 ```
 
 ### Regenerating Datasets
