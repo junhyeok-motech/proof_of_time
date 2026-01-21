@@ -15,6 +15,7 @@ Tasks:
 from __future__ import annotations
 
 import json
+import sys
 from pathlib import Path
 from typing import Iterable, List
 
@@ -25,7 +26,18 @@ from inspect_ai.scorer import answer, match
 from inspect_ai.solver import generate, system_message
 from inspect_ai.tool import bash, bash_session, python, text_editor, think
 
-from inspect.common.prompt_utils import get_offline_preamble
+# Add parent directory to path to import common module
+_BENCHMARKS_DIR = Path(__file__).resolve().parent.parent
+if str(_BENCHMARKS_DIR) not in sys.path:
+    sys.path.insert(0, str(_BENCHMARKS_DIR))
+
+from common.prompt_utils import get_offline_preamble
+from common.task_config import (
+    AGENT_TASK_CONFIG,
+    AGENT_TASK_LIMITS,
+    SIMPLE_TASK_CONFIG,
+    SIMPLE_TASK_LIMITS,
+)
 
 SANDBOX_ROOT = Path(__file__).resolve().parent / "sandbox"
 PROFESSOR_FIELD_DATASET = Path(__file__).resolve().parent / "professor_field_mcq.jsonl"
@@ -49,7 +61,6 @@ def _load_samples(path: Path) -> Iterable[Sample]:
             yield Sample(
                 id=idx,
                 input=input_text or payload.get("context"),
-                question=question,
                 choices=payload.get("choices"),
                 target=payload["answer"],
                 metadata=payload.get("metadata", {}),
@@ -108,9 +119,10 @@ def faculty_professor_field_task() -> Task:
     return Task(
         dataset=dataset,
         solver=agent,
-        scorer=match(),  # Expects exact field name match
+        scorer=match(),
         sandbox="docker",
-        max_messages=40,
+        config=AGENT_TASK_CONFIG,
+        **AGENT_TASK_LIMITS,
         metadata={"benchmark": "faculty_professor_field"},
     )
 
@@ -125,7 +137,8 @@ def faculty_professor_field_task_local() -> Task:
         solver=agent,
         scorer=match(),
         sandbox=None,
-        max_messages=40,
+        config=AGENT_TASK_CONFIG,
+        **AGENT_TASK_LIMITS,
         metadata={"benchmark": "faculty_professor_field_local"},
     )
 
@@ -140,7 +153,8 @@ def faculty_professor_field_task_no_offline_prompt() -> Task:
         solver=agent,
         scorer=match(),
         sandbox="docker",
-        max_messages=40,
+        config=AGENT_TASK_CONFIG,
+        **AGENT_TASK_LIMITS,
         metadata={"benchmark": "faculty_professor_field_no_offline"},
     )
 
@@ -155,7 +169,8 @@ def faculty_professor_field_task_no_offline_prompt_local() -> Task:
         solver=agent,
         scorer=match(),
         sandbox=None,
-        max_messages=40,
+        config=AGENT_TASK_CONFIG,
+        **AGENT_TASK_LIMITS,
         metadata={"benchmark": "faculty_professor_field_no_offline_local"},
     )
 
@@ -168,9 +183,10 @@ def faculty_professor_article_task() -> Task:
     return Task(
         dataset=dataset,
         solver=agent,
-        scorer=answer("word"),  # Expects A, B, C, D, or None
+        scorer=match(),
         sandbox="docker",
-        max_messages=40,
+        config=AGENT_TASK_CONFIG,
+        **AGENT_TASK_LIMITS,
         metadata={"benchmark": "faculty_professor_article"},
     )
 
@@ -183,9 +199,10 @@ def faculty_professor_article_task_local() -> Task:
     return Task(
         dataset=dataset,
         solver=agent,
-        scorer=answer("word"),  # Expects A, B, C, D, or None
+        scorer=match(),
         sandbox=None,
-        max_messages=40,
+        config=AGENT_TASK_CONFIG,
+        **AGENT_TASK_LIMITS,
         metadata={"benchmark": "faculty_professor_article_local"},
     )
 
@@ -198,9 +215,10 @@ def faculty_professor_article_task_no_offline_prompt() -> Task:
     return Task(
         dataset=dataset,
         solver=agent,
-        scorer=answer("word"),  # Expects A, B, C, D, or None
+        scorer=match(),
         sandbox="docker",
-        max_messages=40,
+        config=AGENT_TASK_CONFIG,
+        **AGENT_TASK_LIMITS,
         metadata={"benchmark": "faculty_professor_article_no_offline"},
     )
 
@@ -213,9 +231,10 @@ def faculty_professor_article_task_no_offline_prompt_local() -> Task:
     return Task(
         dataset=dataset,
         solver=agent,
-        scorer=answer("word"),  # Expects A, B, C, D, or None
+        scorer=match(),
         sandbox=None,
-        max_messages=40,
+        config=AGENT_TASK_CONFIG,
+        **AGENT_TASK_LIMITS,
         metadata={"benchmark": "faculty_professor_article_no_offline_local"},
     )
 
@@ -228,9 +247,10 @@ def faculty_field_focus_task() -> Task:
     return Task(
         dataset=dataset,
         solver=agent,
-        scorer=match(),  # Expects exact field name match
+        scorer=match(),
         sandbox="docker",
-        max_messages=40,
+        config=AGENT_TASK_CONFIG,
+        **AGENT_TASK_LIMITS,
         metadata={"benchmark": "faculty_field_focus"},
     )
 
@@ -243,9 +263,10 @@ def faculty_field_focus_task_local() -> Task:
     return Task(
         dataset=dataset,
         solver=agent,
-        scorer=match(),  # Expects exact field name match
+        scorer=match(),
         sandbox=None,
-        max_messages=40,
+        config=AGENT_TASK_CONFIG,
+        **AGENT_TASK_LIMITS,
         metadata={"benchmark": "faculty_field_focus_local"},
     )
 
@@ -258,9 +279,10 @@ def faculty_field_focus_task_no_offline_prompt() -> Task:
     return Task(
         dataset=dataset,
         solver=agent,
-        scorer=match(),  # Expects exact field name match
+        scorer=match(),
         sandbox="docker",
-        max_messages=40,
+        config=AGENT_TASK_CONFIG,
+        **AGENT_TASK_LIMITS,
         metadata={"benchmark": "faculty_field_focus_no_offline"},
     )
 
@@ -273,9 +295,10 @@ def faculty_field_focus_task_no_offline_prompt_local() -> Task:
     return Task(
         dataset=dataset,
         solver=agent,
-        scorer=match(),  # Expects exact field name match
+        scorer=match(),
         sandbox=None,
-        max_messages=40,
+        config=AGENT_TASK_CONFIG,
+        **AGENT_TASK_LIMITS,
         metadata={"benchmark": "faculty_field_focus_no_offline_local"},
     )
 
@@ -287,17 +310,18 @@ def faculty_all_tasks() -> Task:
     professor_field_samples = list(_load_samples(PROFESSOR_FIELD_DATASET))
     professor_article_samples = list(_load_samples(PROFESSOR_ARTICLE_DATASET))
     field_focus_samples = list(_load_samples(FIELD_FOCUS_DATASET))
-    
+
     all_samples = professor_field_samples + professor_article_samples + field_focus_samples
     dataset = MemoryDataset(all_samples)
     agent = build_agent()
-    
+
     return Task(
         dataset=dataset,
         solver=agent,
-        scorer=match(),  # Generic match for all task types
+        scorer=match(),
         sandbox="docker",
-        max_messages=40,
+        config=AGENT_TASK_CONFIG,
+        **AGENT_TASK_LIMITS,
         metadata={"benchmark": "faculty_all_tasks"},
     )
 
@@ -316,9 +340,10 @@ def faculty_all_tasks_local() -> Task:
     return Task(
         dataset=dataset,
         solver=agent,
-        scorer=match(),  # Generic match for all task types
+        scorer=match(),
         sandbox=None,
-        max_messages=40,
+        config=AGENT_TASK_CONFIG,
+        **AGENT_TASK_LIMITS,
         metadata={"benchmark": "faculty_all_tasks_local"},
     )
 
@@ -337,9 +362,10 @@ def faculty_all_tasks_no_offline_prompt() -> Task:
     return Task(
         dataset=dataset,
         solver=agent,
-        scorer=match(),  # Generic match for all task types
+        scorer=match(),
         sandbox="docker",
-        max_messages=40,
+        config=AGENT_TASK_CONFIG,
+        **AGENT_TASK_LIMITS,
         metadata={"benchmark": "faculty_all_tasks_no_offline"},
     )
 
@@ -358,9 +384,10 @@ def faculty_all_tasks_no_offline_prompt_local() -> Task:
     return Task(
         dataset=dataset,
         solver=agent,
-        scorer=match(),  # Generic match for all task types
+        scorer=match(),
         sandbox=None,
-        max_messages=40,
+        config=AGENT_TASK_CONFIG,
+        **AGENT_TASK_LIMITS,
         metadata={"benchmark": "faculty_all_tasks_no_offline_local"},
     )
 
@@ -379,5 +406,7 @@ def faculty_professor_field_simple_task() -> Task:
             generate(),
         ],
         scorer=match(),
+        config=SIMPLE_TASK_CONFIG,
+        **SIMPLE_TASK_LIMITS,
         metadata={"benchmark": "faculty_professor_field_simple"},
     )

@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import json
+import sys
 from pathlib import Path
 from typing import Iterable, List
 
@@ -13,7 +14,18 @@ from inspect_ai.scorer import match
 from inspect_ai.solver import generate, system_message
 from inspect_ai.tool import bash, bash_session, python, text_editor, think
 
-from inspect.common.prompt_utils import get_offline_preamble
+# Add parent directory to path to import common module
+_BENCHMARKS_DIR = Path(__file__).resolve().parent.parent
+if str(_BENCHMARKS_DIR) not in sys.path:
+    sys.path.insert(0, str(_BENCHMARKS_DIR))
+
+from common.prompt_utils import get_offline_preamble
+from common.task_config import (
+    AGENT_TASK_CONFIG,
+    AGENT_TASK_LIMITS,
+    SIMPLE_TASK_CONFIG,
+    SIMPLE_TASK_LIMITS,
+)
 
 SANDBOX_ROOT = Path(__file__).resolve().parent / "sandbox"
 DATASET_PATH = Path(__file__).resolve().parent / "mcq_dataset.jsonl"
@@ -34,7 +46,6 @@ def _load_samples(path: Path) -> Iterable[Sample]:
             yield Sample(
                 id=idx,
                 input=input_text,
-                question=question,
                 choices=payload.get("choices"),
                 target=payload["answer"],
                 metadata=payload.get("metadata", {}),
@@ -74,7 +85,8 @@ def sota_bucket_task() -> Task:
         solver=agent,
         scorer=match(),
         sandbox="docker",
-        max_messages=30,
+        config=AGENT_TASK_CONFIG,
+        **AGENT_TASK_LIMITS,
         metadata={"benchmark": "sota_forecast_mcq"},
     )
 
@@ -89,7 +101,8 @@ def sota_bucket_task_local() -> Task:
         solver=agent,
         scorer=match(),
         sandbox=None,
-        max_messages=30,
+        config=AGENT_TASK_CONFIG,
+        **AGENT_TASK_LIMITS,
         metadata={"benchmark": "sota_forecast_mcq_local"},
     )
 
@@ -103,7 +116,8 @@ def sota_bucket_task_no_offline_prompt() -> Task:
         solver=agent,
         scorer=match(),
         sandbox="docker",
-        max_messages=30,
+        config=AGENT_TASK_CONFIG,
+        **AGENT_TASK_LIMITS,
         metadata={"benchmark": "sota_forecast_mcq_no_offline"},
     )
 
@@ -118,7 +132,8 @@ def sota_bucket_task_no_offline_prompt_local() -> Task:
         solver=agent,
         scorer=match(),
         sandbox=None,
-        max_messages=30,
+        config=AGENT_TASK_CONFIG,
+        **AGENT_TASK_LIMITS,
         metadata={"benchmark": "sota_forecast_mcq_no_offline_local"},
     )
 
@@ -136,5 +151,7 @@ def sota_bucket_simple_task() -> Task:
             generate(),
         ],
         scorer=match(),
+        config=SIMPLE_TASK_CONFIG,
+        **SIMPLE_TASK_LIMITS,
         metadata={"benchmark": "sota_forecast_mcq_simple"},
     )

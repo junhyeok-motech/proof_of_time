@@ -1,6 +1,6 @@
-# *CL conference Award Tier Classification Benchmark - Inspect AI
+# *CL Conference Award Tier Classification Benchmark - Inspect AI
 
-This benchmark evaluates LLM agents on classifying EMNLP papers into award tiers using a sandboxed environment with accepted-paper data.
+This benchmark evaluates LLM agents on classifying NLP conference papers into award tiers using a sandboxed environment with accepted-paper data.
 
 ## Overview
 
@@ -17,7 +17,9 @@ You can download our generated questions from: https://huggingface.co/datasets/A
 
 ## Tasks
 
-### 1. Award MCQ (`emnlp_awards_mcq`)
+### 1. Pre-Cutoff Tasks (`pre_cutoff_task`)
+
+**Purpose**: Evaluate on historical papers (ACL/EMNLP/NAACL 2018-2024) that may be in model training data.
 
 **Question**: Which recognition tier best fits this paper?
 
@@ -34,25 +36,32 @@ Options: Findings, Main, Outstanding, Best
 Answer with only one word: Best, Outstanding, Main, or Findings.
 ```
 
-**Dataset**: `mcq_dataset.jsonl` (award-based prompts).
+**Dataset**: `pre-cutoff_mcq.jsonl`
 
-### 2. Historical MCQ (`emnlp_historical_mcq`)
+### 2. Post-Cutoff EMNLP Tasks (`post_cutoff_emnlp_task`)
 
-**Question**: Classify historical accepted papers (main/findings) into tiers.
+**Purpose**: Evaluate on 2025+ EMNLP papers that are after model knowledge cutoff (temporal contamination-free).
 
-**Notes**: These tasks are sampled from accepted-paper corpora and are designed to test whether the agent can distinguish Main vs. Findings using the same rubric.
+**Dataset**: `post-cutoff_emnlp.jsonl`
 
-**Dataset**: `historical_mcq_dataset.jsonl` (historical main/findings prompts).
+### 3. Post-Cutoff ACL/NAACL Tasks (`post_cutoff_acl_naacl_task`)
 
-### 3. Simple Baseline (`emnlp_awards_mcq_simple`)
+**Purpose**: Evaluate on 2025+ ACL/NAACL papers that are after model knowledge cutoff.
 
-A no-tools baseline that answers directly without sandbox inspection.
+**Dataset**: `post-cutoff_acl_naacl.jsonl`
+
+### 4. Simple Baselines
+
+No-tools baselines that answer directly without sandbox inspection:
+- `pre_cutoff_simple_task`
+- `post_cutoff_emnlp_simple_task`
+- `post_cutoff_acl_naacl_simple_task`
 
 ### Variants
 
 Each core task also has:
 
-- **`_no_offline`** variants (without the shared offline preamble)
+- **`_no_offline_prompt`** variants (without the shared offline preamble)
 - **`_local`** variants (no Docker sandbox; direct file access)
 
 ## Running the Benchmark
@@ -70,16 +79,20 @@ docker ps
 ### Run Individual Tasks
 
 ```bash
-# Award MCQ
-inspect eval benchmarks/award_react/benchmark.py@emnlp_awards_mcq_task \
+# Pre-cutoff (historical papers)
+inspect eval benchmarks/award_react/benchmark.py@pre_cutoff_task \
   --model openai/gpt-4o-mini
 
-# Historical MCQ
-inspect eval benchmarks/award_react/benchmark.py@emnlp_historical_mcq_task \
+# Post-cutoff EMNLP (2025+ papers)
+inspect eval benchmarks/award_react/benchmark.py@post_cutoff_emnlp_task \
+  --model openai/gpt-4o-mini
+
+# Post-cutoff ACL/NAACL (2025+ papers)
+inspect eval benchmarks/award_react/benchmark.py@post_cutoff_acl_naacl_task \
   --model openai/gpt-4o-mini
 
 # Simple baseline (no tools)
-inspect eval benchmarks/award_react/benchmark.py@emnlp_awards_mcq_simple_task \
+inspect eval benchmarks/award_react/benchmark.py@pre_cutoff_simple_task \
   --model openai/gpt-4o-mini
 ```
 
@@ -87,17 +100,21 @@ inspect eval benchmarks/award_react/benchmark.py@emnlp_awards_mcq_simple_task \
 
 ```bash
 # Claude
-inspect eval benchmarks/award_react/benchmark.py@emnlp_awards_mcq_task \
+inspect eval benchmarks/award_react/benchmark.py@post_cutoff_emnlp_task \
   --model anthropic/claude-3-5-sonnet-20241022
 
 # GPT-4
-inspect eval benchmarks/award_react/benchmark.py@emnlp_awards_mcq_task \
+inspect eval benchmarks/award_react/benchmark.py@post_cutoff_emnlp_task \
   --model openai/gpt-4o
 
 # Limit samples for quick testing
-inspect eval benchmarks/award_react/benchmark.py@emnlp_awards_mcq_task \
+inspect eval benchmarks/award_react/benchmark.py@pre_cutoff_task \
   --model openai/gpt-4o-mini \
   --limit 5
+
+# Local variant (no Docker)
+inspect eval benchmarks/award_react/benchmark.py@pre_cutoff_task_local \
+  --model openai/gpt-4o-mini
 ```
 
 ## Sandbox Environment
@@ -106,14 +123,15 @@ inspect eval benchmarks/award_react/benchmark.py@emnlp_awards_mcq_task \
 
 Expected in `sandbox/data/` (mounted read-only inside the Docker sandbox):
 
-- `historical_papers_2021_2024.jsonl`: accepted-paper corpus with titles, abstracts, authors, venues, tags
+- `accepted_papers.csv`: accepted-paper corpus with titles, abstracts, authors, venues, award status
 
 ### Task Files
 
 Located in `benchmarks/award_react/`:
 
-- `mcq_dataset.jsonl`: award paper prompts
-- `historical_mcq_dataset.jsonl`: historical main/findings prompts
+- `pre-cutoff_mcq.jsonl`: Pre-2025 conference awards (ACL/EMNLP/NAACL 2018-2024)
+- `post-cutoff_emnlp.jsonl`: Post-2025 EMNLP awards
+- `post-cutoff_acl_naacl.jsonl`: Post-2025 ACL/NAACL awards
 
 ### Available Tools
 
@@ -140,8 +158,7 @@ The React agent is prompted to:
 
 ### Accuracy
 
-- **Award MCQ**: Exact match on the tier label
-- **Historical MCQ**: Exact match on the tier label
+- **All tasks**: Exact match on the tier label (Best, Outstanding, Main, or Findings)
 
 ## Data Sources
 
